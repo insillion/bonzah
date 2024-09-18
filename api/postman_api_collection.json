@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "1ea57c92-5199-4081-a993-e5ba2a49cc98",
+		"name": "Bonzah - Auto Rental Insurance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27827336"
+	},
+	"item": [
+		{
+			"name": "1. Auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('token', pm.response.json().data.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"{{username}}\",\n    \"pwd\": \"{{password}}\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/auth",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				},
+				"description": "### Auth API\n\nThis endpoint allows users to authenticate and obtain access to the system.\n\n#### Request Body Parameters\n\n- `email` (string, required): The email address of the user.\n- `pwd` (string, required): The password of the user.\n    \n\nGet the token from response and use to access other APIs\n\nFor this collection BonZah - Rental envrionment file to be used"
+			},
+			"response": []
+		},
+		{
+			"name": "2. Masters",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "in-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"master_name\": \"zipcode\",\n    \"values\": \"city,state,country\",\n    \"filter\": \"zipcode\",\n    \"filter_value\": \"01009\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/Bonzah/master",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Bonzah",
+						"master"
+					]
+				},
+				"description": "This API endpoint allows you to load master data based on the below requests.\n\nCountry Master:-\n\n{  \n\"master_name\": \"country\",  \n\"values\": \"country\",  \n\"filter\": \"\",  \n\"filter_value\": \"\"  \n}\n\nState Master:-\n\n{  \n\"master_name\": \"state\",  \n\"values\": \"state\",  \n\"filter\": \"country\",  \n\"filter_value\": \"United States\"  \n}\n\nResidence Country Master:-\n\n{  \n\"master_name\": \"residence_country\",  \n\"values\": \"country\",  \n\"filter\": \"\",  \n\"filter_value\": \"\"  \n}\n\nResidence State Master:-\n\n{  \n\"master_name\": \"residence_country\",  \n\"values\": \"state\",  \n\"filter\": \"country\",  \n\"filter_value\": \"United States\"  \n}\n\n### Request Body\n\n- `master_name` (string, required): The name of the master to be created.\n- `values` (string, required): The values associated with the master.\n- `filter` (string, required): The filter criteria for the master.\n- `filter_value` (string, required): The value for the filter criteria."
+			},
+			"response": []
+		},
+		{
+			"name": "3. Quote Save",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let policy=pm.response.json().data;",
+							"pm.environment.set('quote_id', policy.quote_id);",
+							"pm.environment.set('policy_id', policy.policy_id);",
+							"pm.environment.set('payment_id', policy.payment_id);",
+							"pm.environment.set('total_amount', policy.payment.total_amount);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "in-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n     \"quote_id\": \"\", \n     \"trip_start_date\": \"07-11-24\", \n     \"trip_end_date\": \"07-12-24\", \n     \"pickup_country\": \"United States\", \n     \"pickup_state\": \"Alaska\", \n     \"drop_off_time\": \"Same\",\n     \"residence_country\": \"United States\", \n     \"residence_state\": \"Baker Island\", \n     \"cdw_cover\": true, \n     \"rcli_cover\": false, \n     \"sli_cover\": true, \n     \"pai_cover\": false, \n     \"first_name\": \"Test\", \n     \"last_name\": \"User\", \n     \"dob\": \"06-25-95\", \n     \"pri_email_address\": \"johnpravin@insillion.com\", \n     \"alt_email_address\": \"johnpravinyesuraj@gmail.com\", \n     \"address_line_1\": \"add1\", \n     \"address_line_2\": \"add2\", \n     \"zip_code\": \"01061\", \n     \"inspection_done\":\"Renter\",\n     \"source\":\"loopit\",\n     \"phone_no\": \"14523243423\"\n }"
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/Bonzah/quote",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Bonzah",
+						"quote"
+					]
+				},
+				"description": "## Bonzah Quote API\n\nThis API endpoint allows you to create a quote for car rental insurance through Bonzah.\n\n### Request\n\n- Method: POST\n- Endpoint: `{{host}}/api/v1/Bonzah/quote`\n- Headers:\n    - Content-Type: application/json\n    - in-auth-token : {{token}}\n\n**Request Body**  \nThe request body should be in JSON format and include the following parameters:\n\n| Key | Type | Description |\n| --- | --- | --- |\n| quote_id | String | Unique identifier for the quote |\n| trip_start_date | date | Start date of the trip (MM-DD-YY) |\n| trip_end_date | date | End date of the trip (MM-DD-YY) |\n| pickup_country | String | Country for car pickup |\n| pickup_state | String | State for car pickup |\n| drop_off_time | String | Time for car drop-off |\n| residence_country | String | Country of residence |\n| residence_state | String | State of residence |\n| cdw_cover | Boolean | Whether Collision Damage Waiver is included |\n| rcli_cover | Boolean | Whether Rental Car Liability Insurance is included |\n| sli_cover | Boolean | Whether Supplemental Liability Insurance is included |\n| pai_cover | Boolean | Whether Personal Accident Insurance is included |\n| first_name | String | First name of the insured person |\n| last_name | String | Last name of the insured person |\n| dob | date | Date of birth of the insured person (MM-DD-YY) |\n| pri_email_address | String | Primary email address of the insured person |\n| alt_email_address | String | Alternate email address of the insured person |\n| address_line_1 | String | Address line 1 of the insured person |\n| address_line_2 | String | Address line 2 of the insured person |\n| zip_code | String | Zip code of the insured person |\n| inspection_done | String | Indicates if inspection is done by. If it b2c pass Renter and if it is loopit or b2b pass Renter/Rental Agency. Mandatory for if CDW cover select |\n| source | String | Source of the request (loopit/b2c) |\n| phone_no | String | Phone number of the insured person |\n\n### Response\n\nThe response will be in JSON format and will include quote_id and premium details. quote_id should be passed if you modify any details on second time hit other wise new quote will be created"
+			},
+			"response": []
+		},
+		{
+			"name": "4. ZIP Code Master",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "in-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"master_name\": \"zipcode\",\n    \"values\": \"city,state,country\",\n    \"filter\": \"zipcode\",\n    \"filter_value\": \"01009\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/Bonzah/master",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Bonzah",
+						"master"
+					]
+				},
+				"description": "This API endpoint will provide city,state and country based on given zip code value in filter_value\n\n{  \n\"master_name\": \"zipcode\",  \n\"values\": \"city,state,country\",  \n\"filter\": \"zipcode\",  \n\"filter_value\": \"01009\"  \n}\n\n### Request Body\n\n- `master_name` (string, required): The name of the master to be created.\n- `values` (string, required): The values associated with the master.\n- `filter` (string, required): The filter criteria for the master.\n- `filter_value` (string, required): The value for the filter criteria."
+			},
+			"response": []
+		},
+		{
+			"name": "5. Quote  Finalize",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let policy=pm.response.json().data;",
+							"pm.environment.set('quote_id', policy.quote_id);",
+							"pm.environment.set('policy_id', policy.policy_id);",
+							"pm.environment.set('payment_id', policy.payment_id);",
+							"pm.environment.set('total_amount', policy.payment.total_amount);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "in-auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n     \"quote_id\": \"\", \n     \"trip_start_date\": \"07-11-24\", \n     \"trip_end_date\": \"07-12-24\", \n     \"pickup_country\": \"United States\", \n     \"pickup_state\": \"Alaska\", \n     \"drop_off_time\": \"Same\",\n     \"residence_country\": \"United States\", \n     \"residence_state\": \"Baker Island\", \n     \"cdw_cover\": true, \n     \"rcli_cover\": false, \n     \"sli_cover\": true, \n     \"pai_cover\": false, \n     \"first_name\": \"Test\", \n     \"last_name\": \"User\", \n     \"dob\": \"06-25-95\", \n     \"pri_email_address\": \"johnpravin@insillion.com\", \n     \"alt_email_address\": \"johnpravinyesuraj@gmail.com\", \n     \"address_line_1\": \"add1\", \n     \"address_line_2\": \"add2\", \n     \"zip_code\": \"01061\", \n     \"inspection_done\":\"Renter\",\n     \"source\":\"loopit\",\n     \"phone_no\": \"14523243423\"\n }"
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/Bonzah/quote",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Bonzah",
+						"quote"
+					]
+				},
+				"description": "## Bonzah Quote API\n\nThis API endpoint will allows you to finalize the quote. to finalize need to finalize key value as 1 and quote id to be passed which is received from quote save API.\n\n### Request\n\n- Method: POST\n- Endpoint: `{{host}}/api/v1/Bonzah/quote`\n- Headers:\n    - Content-Type: application/json\n    - in-auth-token : {{token}}\n\n**Request Body**  \nThe request body should be in JSON format and include the following parameters:\n\n| Key | Type | Description |\n| --- | --- | --- |\n| quote_id | String | Unique identifier for the quote |\n| trip_start_date | date | Start date of the trip (MM-DD-YY) |\n| trip_end_date | date | End date of the trip (MM-DD-YY) |\n| pickup_country | String | Country for car pickup |\n| pickup_state | String | State for car pickup |\n| drop_off_time | String | Time for car drop-off |\n| residence_country | String | Country of residence |\n| residence_state | String | State of residence |\n| cdw_cover | Boolean | Whether Collision Damage Waiver is included |\n| rcli_cover | Boolean | Whether Rental Car Liability Insurance is included |\n| sli_cover | Boolean | Whether Supplemental Liability Insurance is included |\n| pai_cover | Boolean | Whether Personal Accident Insurance is included |\n| first_name | String | First name of the insured person |\n| last_name | String | Last name of the insured person |\n| dob | date | Date of birth of the insured person (MM-DD-YY) |\n| pri_email_address | String | Primary email address of the insured person |\n| alt_email_address | String | Alternate email address of the insured person |\n| address_line_1 | String | Address line 1 of the insured person |\n| address_line_2 | String | Address line 2 of the insured person |\n| zip_code | String | Zip code of the insured person |\n| inspection_done | String | Indicates if inspection is done by. If it b2c pass Renter and if it is loopit or b2b pass Renter/Rental Agency. Mandatory for if CDW cover select |\n| source | String | Source of the request (loopit/b2c) |\n| phone_no | String | Phone number of the insured person |\n| finalize | number | pass 1 to finalize the quote |\n\n### Response\n\nThe response will be in JSON format and will include payment_id and total_amount."
+			},
+			"response": []
+		},
+		{
+			"name": "5. Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "in-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"{{payment_id}}\",\n    \"amount\": {{total_amount}}\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/payment/cash",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"payment",
+						"cash"
+					]
+				},
+				"description": "This endpoint allows the client to make a cash payment by sending a POST request to the specified URL. The request should include a JSON payload with the \"key\" parameter containing the payment ID and the \"amount\" parameter containing the total amount to be paid.\n\npayment_id and amount to be passed which is recived from quote finalize API.\n\nResponse will includes policy_no and policy_id. Once payment done policy will be generated"
+			},
+			"response": []
+		},
+		{
+			"name": "6. Policy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "in-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/v1/policy?policy_id={{policy_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"policy"
+					],
+					"query": [
+						{
+							"key": "policy_id",
+							"value": "{{policy_id}}"
+						}
+					]
+				},
+				"description": "This endpoint makes an HTTP GET request to retrieve information about a specific policy. The `policy_id` parameter in the query string should be provided to identify the policy.\n\n### Request Body\n\nThis request does not require a request body.\n\n### Response Body\n\nThe response will include the details of the policy identified by the `policy_id`, such as policy name, type, coverage details, and any additional information related to the policy."
+			},
+			"response": []
+		},
+		{
+			"name": "7. Download PDF",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "in-auth-token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/v1/policy/data/{{policy_id}}/policy.pdf/policy.pdf?download=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"policy",
+						"data",
+						"{{policy_id}}",
+						"policy.pdf",
+						"policy.pdf"
+					],
+					"query": [
+						{
+							"key": "download",
+							"value": "1"
+						}
+					]
+				},
+				"description": "This endpoint retrieves the PDF file for a specific policy by making an HTTP GET request to the specified URL. The request does not include a request body, as it is a simple GET request to download the PDF file. The response will contain the PDF file for the requested policy."
+			},
+			"response": []
+		}
+	]
+}
