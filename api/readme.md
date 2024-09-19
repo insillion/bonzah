@@ -1,4 +1,9 @@
-# POST /api/v1/auth
+|# | API | Description |
+|:--:|:--:|:--|
+|1|[auth](#post-apiv1auth)| Authentication request|
+|2|[master](#payload-for-residence-country-master)| Authentication request|
+
+# POST `/api/v1/auth`
 
 `auth` endpoint allows users to authenticate and obtain access to the system.
  
@@ -10,7 +15,7 @@
 Get the token from response and use to access other APIs
 ________________________________________
 
-# GET /api/v1/Bonzah/master
+# GET `/api/v1/Bonzah/master`
 
 `master` endpoint allows user to load master data based on the below requests.
 
