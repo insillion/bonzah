@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Car Rental Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Raleway;
+            background-color: #ffffff;
+            /* Background color */
+            display: flex;
+            margin: 0;
+        }
+
+        form {
+            background-color: #e20082;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 13.5px;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #fff;
+
+        }
+
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background: #f6d8ea;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            width: 95%;
+            padding: 8px 30px;
+            background-color: #e20082;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: solid;
+            border-color: white;
+            border-width: thin;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .form-heading {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .info-text {
+            color: #fff;
+            font-size: 13px;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .form-box {
+
+            box-shadow: 0 1px 1px #08080847;
+            opacity: 1;
+        }
+
+        .form-container button:hover {
+            background-color: #ff338f;
+            color: white;
+        }
+
+        /* Custom radio button styling */
+        .radio-group {
+            display: flex;
+
+            margin-top: 10px;
+        }
+
+        .radio-group label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+        }
+
+        .radio-group input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"]+span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            //background-color: white;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: inline-block;
+
+            vertical-align: middle;
+
+        }
+
+        .radio-group input[type="radio"]:checked+span {
+            background-color: #ff007f;
+            box-shadow: 0 0 0 4px white inset;
+
+        }
+
+        .radio-group span::after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .radio-group input[type="radio"]:checked+span::after {
+            background-color: #ffffff;
+            display: block;
+        }
+
+        .radio-group span::after {
+            top: 4px;
+            left: 4px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+
+
+        }
+
+        input[type="date"] {
+            position: relative;
+            padding: 10px;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            color: transparent;
+            background: none;
+            z-index: 1;
+        }
+
+        input[type="date"]:before {
+            color: transparent;
+            background: none;
+            display: block;
+            font-family: 'FontAwesome';
+            content: '\f073';
+            /* This is the calendar icon in FontAwesome */
+            width: 15px;
+            height: 20px;
+            position: absolute;
+            top: 12px;
+            right: 6px;
+            color: #999;
+        }
+
+        < !-- .down_arrow {
+            -->< !-- position: absolute;
+            -->< !-- color: #999;
+            -->< !-- top: 65px;
+            -->< !-- left: 370px;
+            -->< !--
+        }
+
+        -->< select {
+            < !-- -webkit-appearance: none;
+            -->width: 100%;
+            padding: 10px;
+            margin-bottom: 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 13.5px;
+            box-sizing: border-box;
+            background: #f6d8ea;
+        }
+
+        .column {
+            float: left;
+            //width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="row">
+        <div class="column">
+            <form id="carRentalForm" class="form-box">
+                <!-- <div> -->
+                <label for="pickupState">Rental car pickup location:</label>
+                <!-- <i class="fa fa-caret-down down_arrow"></i> -->
+                <select id="pickupState" name="pickupState">
+                    <option value="">Select a state</option>
+                    <!-- Add country options here -->
+                </select>
+                <!-- </div> -->
+                <label for="tripStart">When does your trip start?</label>
+                <input type="date" id="tripStart" name="tripStart">
+
+                <label for="tripEnd">When does your trip end?</label>
+                <input type="date" id="tripEnd" name="tripEnd">
+
+                <label>The rental car drop off time</label>
+                <div class="info-text">Rental car drop off time: Policies are sold in 24-hour increments. If your drop
+                    off time exceeds a 24-hour cycle from the time of pickup, select "Later".</div>
+
+                <div class="radio-group">
+                    <label><input type="radio" id="same" name="dropoffTime" value="Same" checked><span></span>
+                        Same</label>
+                    <label><input type="radio" id="later" name="dropoffTime" value="Later"><span></span> Later</label>
+                </div>
+                <!-- <div> -->
+                <label for="residenceCountry">Country of Residence</label>
+                <!-- 	<i class="fa fa-caret-down down_arrow"></i> -->
+                <select id="residenceCountry" name="residenceCountry">
+                    <option value="">Select Residence</option>
+                    <!-- Add country options here -->
+                </select>
+                <!-- </div> -->
+                <button type="button" onclick="getQuote()">Get my quote</button>
+            </form>
+        </div>
+        <div class="column"></div>
+    </div>
+    <script>
+        const apiEndpoint = 'https://ngiuae.sb.insillion.com/api/v1/Bonzah/master';
+        window.onload = function () {
+            loadStates("pickup");
+            loadCountry("residence");
+
+        }
+        function loadCountry(type) {
+            let master_name = ''
+            if (type == 'residence') {
+                master_name = 'residence_country';
+            }
+            let params = { "master_name": master_name, "values": "country", "filter": "", "filter_value": "" }
+            const country = document.getElementById(`${type}Country`);
+            fetch(apiEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'in-auth-token': 'guest'
+                },
+                body: JSON.stringify(params)
+            })
+                .then(response => response.json())
+                .then(data => {
+
+                    let res = data;
+                    if (res.status == 0) {
+                        if (type == 'residence') {
+                            let country_list = res.data;
+                            country_list.forEach(item => {
+                                let option = document.createElement('option');
+                                option.value = item.country;
+                                option.textContent = item.country;
+                                country.appendChild(option);
+                            });
+                        }
+                    }
+
+                })
+                .catch(error => {
+                    console.error('Error fetching states:', error);
+                    alert('Unable to load states. Please try again.');
+                });
+
+        }
+        function loadStates(type) {
+            let master_name = ''
+            let filter_value = '';
+            const stateSelect = document.getElementById(`${type}State`);
+            if (type == 'pickup') {
+                master_name = 'state';
+                filter_value = 'United States';
+            }
+            let params = { "master_name": master_name, "values": "state", "filter": "country", "filter_value": filter_value, "broker_language": "", "broker_code": "" };
+            if (filter_value) {
+                fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'in-auth-token': 'guest'
+                    },
+                    body: JSON.stringify(params)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        let res = data;
+                        if (res.status == 0) {
+                            if (type == 'pickup') {
+                                let option = document.createElement('option');
+                                let state_list = res.data;
+                                state_list.forEach(item => {
+                                    let option = document.createElement('option');
+                                    option.value = item;
+                                    option.textContent = item;
+                                    stateSelect.appendChild(option);
+                                });
+                            } else if (type == 'residence') {
+                                let state_list = res.data;
+                                state_list.forEach(item => {
+                                    let option = document.createElement('option');
+                                    option.value = item.state;
+                                    option.textContent = item.state;
+                                    stateSelect.appendChild(option);
+                                });
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching states:', error);
+                        alert('Unable to load states. Please try again.');
+                    });
+            }
+        }
+        function getQuote() {
+            const pickupCountry = 'United States';
+            const pickupState = document.getElementById('pickupState').value;
+            const tripStart = document.getElementById('tripStart').value;
+            const tripEnd = document.getElementById('tripEnd').value;
+            const dropoffTime = document.querySelector('input[name="dropoffTime"]:checked').value;
+            const residenceCountry = document.getElementById('residenceCountry').value;
+            const residenceState = '';
+            if (pickupCountry && pickupState && tripStart && tripEnd && residenceCountry) {
+                const queryParams = new URLSearchParams({
+                    pickupCountry: pickupCountry,
+                    pickupState: pickupState,
+                    tripStart: tripStart,
+                    tripEnd: tripEnd,
+                    dropoffTime: dropoffTime,
+                    residenceCountry: residenceCountry,
+                    residenceState: residenceState,
+                    ra: '' //Co-branding RA name. Ex: truqit
+                });
+                const redirectUrl = `https://digital.insillion.com/bonzah/#/quote/policy?${queryParams}`;
+                console.log(redirectUrl)
+
+                window.location.href = redirectUrl;
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
