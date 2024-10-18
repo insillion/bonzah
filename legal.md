@@ -58,4 +58,4 @@ Bonzah will allow rental car companies to accept insurance payments from renters
 # Thank you!
 This information is intended to help us collectively create a better experience for renters and rental car companies. For example, by having the rental contract information, we will be able to automate part of our claims process and hope to make what everyone agrees is an unpleasant experience, less unpleasant. Additionally, this data will help us to create new and better products for our partners.  
 
-If you have any complaints, questions, or suggestions, please let us know at [brandon@bonzah.com](mailto:brandon@bonzah.com) or (515) 444-5669 (my business mobile).
+If you have any complaints, questions, or suggestions, please let us know at **[brandon@bonzah.com](mailto:brandon@bonzah.com)** or **(515) 444-5669** (my business mobile).
