@@ -1,4 +1,4 @@
-# Bonzah Overiew
+# Bonzah Overview
 
 ## About Bonzah
 Bonzah is a leading provider of car rental damage and liability insurance. Licensed in all 50 US states, Bonzah provides customers with affordable insurance options directly at the time of booking, reducing the complexity of securing coverage. Bonzah simplifies the insurance process for both travelers and car rental providers, delivering peace of mind and operational efficiency through innovative, integrated solutions.
