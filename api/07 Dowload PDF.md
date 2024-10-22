@@ -1,1 +1,0 @@
-This endpoint retrieves the PDF file for a specific policy by making an HTTP GET request to the specified URL. The request does not include a request body, as it is a simple GET request to download the PDF file. The response will contain the PDF file for the requested policy.
