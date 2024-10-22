@@ -1,3 +1,3 @@
 ### API folder
 
-This folder contains the API collection (JSON) that can be directly imported into POSTMAN API tool.
+This folder contains the API collection (JSON) that can be imported into the POSTMAN API tool.
