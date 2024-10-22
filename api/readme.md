@@ -10,31 +10,11 @@
 
 ---
 <br><br>
-#### *Updated October 6th*
+#### *Updated October 17th*
 <br>
 
-# Bonzah Overiew and API Requirements
-
-### About Bonzah
-Bonzah is a leading provider of car rental damage and liability insurance. Licensed in all 50 US states, Bonzah provides customers with affordable insurance options directly at the time of booking, reducing the complexity of securing coverage. Bonzah simplifies the insurance process for both travelers and car rental providers, delivering peace of mind and operational efficiency through innovative, integrated solutions.
-
-Bonzah currently offers renters daily auto rental insurance options. We also have referral relationships with rental fleet insurers.
-
-
-
-### Bonzah's Renter's Insurance
-Auto rental insurance is personal insurance purchased as part of a rental transaction by renters of automobiles to protect rental cars and damaged third parties. These plans typically are purchased in daily or 24-hour increments and for a duration that matches the rental car contract. For example, if a rental contract is for five days, renters purchase five days of insurance.
-
-
-### Fleet Insurance
-Auto rental fleet insurance is commercial insurance purchased by auto rental companies to protect their fleet of cars on or near their lot and when operated by employees. These plans are typically purchased annually. Auto fleet coverage may extend to renters, but rental operators want to avoid renter claims on company insurance.
-
-Please see our presentation for more information: [Bonzah Insurance Basics](https://docs.google.com/presentation/d/1MaHyNuGshtb5_msqjdReIbZsuQJyiihd/edit?usp=sharing&ouid=112288139653361343255&rtpof=true&sd=true)
-
-<br><br>
-
----
-# 1. API and Resale Requirements
+# Bonzah API Requirements
+## 1. API Payload Requirements
 When integrating with APIs, Bonzah requires the following API connections.
 
 <br>
@@ -43,8 +23,8 @@ When integrating with APIs, Bonzah requires the following API connections.
   <thead>
     <tr>
       <th></th>
-      <th style="width: 350px;">Renter Data</th>
-      <th style="width: 75px;"></th>
+      <th style="width: 350px; ">Renter Data</th>
+      <th style="width: 75px; "></th>
     </tr>
   </thead>
   <tbody>
@@ -240,10 +220,10 @@ When integrating with APIs, Bonzah requires the following API connections.
 
 
 <br><br>
-
-
 ---
-# Website Flow Recommendations
+<br>
+
+# 2. Website Flow Recommendations
 
 ## 1. Front Page
 Bonzah is not as concerned with front page fields. In this example, the rental car company has fields for location, dates, and time.
@@ -277,13 +257,10 @@ Upon the completion of payment and checkout, Bonzah will send an email to the re
 ### Note:
 Changes to policy duration, such as cancellation, or an extension or reduction in days, are not currently available via API. Extensions may be completed in the Bonzah Business Partner Portal by the rental car company or bonzah.com by the renter. Cancellations or reductions in policy duration may be requested in the Bonzah Business Partner Portal by using the Endorsement functionality by the rental car company or on Bonzah.com by using "_____" by the renter.
 
+<br>
+
 ---
-
-<br><br><br>
-
-# Bonzah Insurance Content for Rental Company Websites
-## Insurance Descriptions
-
+## 3. Insurance Coverage Description
 Bonzah allows some liberties here, but we think the most important information to convery to rental customers is:
 - Name of the policy and its acronym : E.g., "Collision Damage Waiver (CDW)"
 - The italicized description.  E.g., "Covers damages to the rental vehicle when there is an accident with another vehicle."
@@ -340,9 +317,3 @@ Combines Primary Rental Vehicle Coverage (CDW) + 3rd Party Liability Coverage (R
 
 ## Complete Liability Guard for Renters and Additional Drivers Listed on the Rental Contract
 Combines RCLI + SLI for complete  3rd Party Liability Coverage
-
-<br><br>
-
----
-
-<br><br>
