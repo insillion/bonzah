@@ -9,6 +9,8 @@
 
 The token from this request's response is used for the subsequent APIs
 
+<br>
+
 **Response**:-
 
 | Key | Description |
@@ -17,3 +19,7 @@ The token from this request's response is used for the subsequent APIs
 | txt | error message |
 | token | System generated token to access other APIs |
 | email | Logged in user |
+
+<br><br>
+
+***By default – Tokens are configured to be valid for 15 minute sessions. To extend this duration, kindly reach out to brandon@bonzah.com.***
