@@ -1,4 +1,4 @@
-### Add New Endorsement for Cancel Policy
+### Remove Pending Endorsement Requests
 
 This endpoint allows you to remove pending endorsement. The eproposal_id parameter in the query string should be provided to identify the endorsement.
 
