@@ -5,6 +5,8 @@ This API endpoint can also be used to save a partially completed quote that can 
 
 To finalize a quote (where no modifications can be made), the "finalize" tag should pass "1" as it's value.
 
+*Please note - Once the quote has been saved, finalized and issued - Policy modifications will not allow the change of the customer's email address.
+
 
 ### Request
 
