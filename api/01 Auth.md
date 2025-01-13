@@ -1,6 +1,11 @@
 # POST /api/v1/auth
 
 `auth` endpoint allows users to authenticate and obtain access to the Bonzah's Insurance policy issuance system.
+
+By default, the auth token remains valid for 15 mins (idle period). To extend this duration (for each user), kindly reach out to the admin/Bonzah.
+
+We recommend making the auth request prior each transaction.
+
  
 #### Request Body Parameters
  
