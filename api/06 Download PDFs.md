@@ -3,5 +3,5 @@ This endpoint retrieves the PDF file for a specific policy by making an HTTP GET
 ### Query Parameters
 |Key|Value|
 |---|---|
-|data_id|{{cdw_pdf_id}} : Fetches and downloads the policy document if a CDW product has been opted<br><br>{{rcli_pdf_id}} : Fetches and downloads the policy document if a RCLI product has been opted<br><br>{{sli_pdf_id}} : Fetches and downloads the policy document if a SLI product has been opted<br><br>{{pai_pdf_id}} : Fetches and downloads the policy document if a PAI product has been opted|
+|data_id|6.a.  {{cdw_pdf_id}} : Fetches and downloads the policy document if a CDW product has been opted<br><br>6.b.  {{rcli_pdf_id}} : Fetches and downloads the policy document if a RCLI product has been opted<br><br>6.c.  {{sli_pdf_id}} : Fetches and downloads the policy document if a SLI product has been opted<br><br>6.d.  {{pai_pdf_id}} : Fetches and downloads the policy document if a PAI product has been opted|
 |download|1|
