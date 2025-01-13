@@ -6,11 +6,19 @@
 |4|[Payment](./04%20Payment.md)| Cash Payment request & response|
 |5|[Policy](./05%20View%20Policy.md)| View Policy response|
 |6|[Download PDF](./06%20Download%20PDFs.md)| Download PDF request|
+|7|[Date Change Endorsement](./07%20Date%20Change%20Endorsement.md)| Modify Policy - Edit Policy Start and End Dates|
+|8|[Name Change Endorsement](./08%20Name%20Change%20Endorsement.md)| Modify Policy - Edit Insured's Information|
+|9|[Cancelation Endorsement](./09%20Cancelation%20Endorsement.md)| Cancel In-effect Policies|
+|10|[Endorsement Payement](./10%20Endorsement%20Payment.md)| Make Payment for the Endorsement|
+|11|[View Endorsement](./11%20View%20Endorsement.md)| View Endorsement|
+|12|[View Pending Endorsements](./12%20View%20Pending%20Endorsements.md)| View Pending Endorsements|
+|13|[List of Completed Endorsements](./13%20List%20of%20Endorsements.md)| View a list of all Completed Endorsements for a given policy|
+|14|[Remove Pending Endorsement](./14%20Remove%20Pending%20Endorsement.md)| View a list of all Completed Endorsements for a given policy|
 
 
 ---
 <br><br>
-#### *Updated October 17th*
+#### *Updated January 5th 2025*
 <br>
 
 # Bonzah API Requirements
