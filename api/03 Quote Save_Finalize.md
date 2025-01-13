@@ -41,7 +41,7 @@ The request body should be in JSON format and include the following parameters:
 | first_name | String | First name of the insured person |Required|
 | last_name | String | Last name of the insured person |Required|
 | dob | date | Date of birth of the insured person (MM/DD/YYYY) |Required|
-| pri_email_address | String | Primary email address of the insured person.  <br>  <br>\* Emails will not be triggered. To view policy COIs call the requests 6,7,8,9 after policy issuance |Required|
+| pri_email_address | String | Primary email address of the insured person.  <br>  <br>\*Emails with policy confirmation and Pre-Post trip inspection links are send to this email ID. To view policy COIs call the requests 6a,6b,6c,6d after policy issuance |Required|
 | alt_email_address | String | Alternate email address of the insured person |Optional|
 | address_line_1 | String | Address line 1 of the insured person |Required|
 | address_line_2 | String | Address line 2 of the insured person |Optional|
