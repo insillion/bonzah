@@ -49,7 +49,7 @@ The request body should be in JSON format and include the following parameters:
 | zip_code | String | Zip code of the insured person |Required|
 | inspection_done | String | Indicates by whom the inspection should be carried out by. Pass "**Renter**" to send the inspection emails to the "pri_email_address", else pass the value as blank or "**Rental Agency**" to send the email to the Rental Agency's email inbox. Mandatory if CDW cover selected |Required for CDW - Defaults to Rental Agency email if empty|
 | source | String | Source of the request - Send value as "**API**" |Required|
-| phone_no | String | Phone number of the insured person (must be 11 digits long, including the country code without the + symbol, followed by the mobile number). |Required|
+| phone_no | String | Phone number of the policy holder. |Required|
 | finalize | Number | 0 - Draft quote  <br>1 - Finalize quote  <br>Once finalized the quote can not be modified |Required to Finalize and Issue policy|
 
 ### Response
