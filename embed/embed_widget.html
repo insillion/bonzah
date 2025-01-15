@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Car Rental Form</title>
+    <style>
+        body {
+            font-family: Raleway;
+            background-color: #ffffff; /* Background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #e20082;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #fff;
+            font-size: 14px;
+        }
+        input[type="date"], select {
+            width: 100%;
+            padding: 12px 12px;
+            margin-bottom: 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            padding: 15px 30px;
+            background-color: #e20082;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: solid;
+            border-color: white;
+            border-width: thin;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffffff;
+            color:#000000;
+        }
+        .form-heading {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .info-text {
+            color: #fff;
+            font-size: 12px;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="carRentalForm">
+
+        <label for="pickupCountry" class="hidden">Rental car pickup Country:</label>
+        <select id="pickupCountry" name="pickupCountry" class="hidden" onchange="loadStates('pickup')">
+            <option value="United States">United States</option>
+        </select>
+		<label for="pickupState">Rental car pickup State:</label>
+        <select id="pickupState" name="pickupState">
+            <option value="">Select state</option>
+        </select>
+
+        <label for="tripStart">When does your trip start?</label>
+        <input type="date" id="tripStart" name="tripStart">
+
+        <label for="tripEnd">When does your trip end?</label>
+        <input type="date" id="tripEnd" name="tripEnd">
+
+        <label>The rental car drop off time</label>
+        <div class="info-text">Policies are sold in 24-hour increments. If your drop off time exceeds a 24-hour cycle from the time of pickup, select "Later".</div>
+        
+        <div class="radio-group">
+            <label><input type="radio" id="same" name="dropoffTime" value="Same" checked> Same</label>
+            <label><input type="radio" id="later" name="dropoffTime" value="Later"> Later</label>
+        </div>
+
+        <label for="residenceCountry">Country of Residence</label>
+        <select id="residenceCountry" name="residenceCountry" onchange="loadStates('residence')">
+            <option value="United States">United States</option>
+
+        </select>
+		<label for="residenceState">State of Residence</label>
+        <select id="residenceState" name="residenceState" >
+            <option value="">Select Residence State</option>
+        </select>
+
+        <button type="button" onclick="getQuote()">Get my quote</button>
+    </form>
+
+    <script>
+	    const domain="https://bonzah.sb.insillion.com";
+        //const rdomain="https://digital.insillion.com/bonzahsb";
+        let apiEndpoint = domain+'/api/v1/Bonzah/master';
+	    window.onload = function () {
+         loadStates('pickup');
+         loadCountry("residence");
+		 loadStates('residence');
+        };
+
+        function loadCountry(type) {
+            let master_name ='';
+            if(type == 'pickup'){
+                master_name = 'country';
+            }else if(type == 'residence'){
+                master_name = 'residence_country';
+            }
+            let  params ={"master_name":master_name,"values":"country","filter":"","filter_value":""};
+            let country = document.getElementById(`${type}Country`);
+			
+                fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+						'in-auth-token':'guest'
+                    },
+                    body: JSON.stringify(params)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    let res =data;
+                    if(res.status == 0){
+                        if(type == 'pickup'){
+                            let option = document.createElement('option');
+                            let country_list =res.data.country;
+                            option.value = country_list;
+                            option.textContent =country_list;
+                            country.appendChild(option);
+                        }else if(type == 'residence'){
+                            let country_list =res.data;
+                            country_list.forEach(item => {
+                              let pickup_option = document.createElement('option');
+                              pickup_option.value =item.country;
+                              pickup_option.textContent=item.country;
+                              country.appendChild(pickup_option);
+                            });
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching states:', error);
+                    alert('Unable to load '+master_name+'. Please try again.');
+                });
+        }
+
+        function loadStates(type) {
+            let master_name ='';
+            if(type == 'pickup'){
+                master_name = 'state';
+            }else if(type == 'residence'){
+                master_name = 'residence_state';
+            }
+            let filter_value = document.getElementById(`${type}Country`).value;
+            let stateSelect = document.getElementById(`${type}State`);
+			// Clear existing options
+			stateSelect.innerHTML = '';
+	
+            let params ={"master_name":master_name,"values":"state","filter":"country","filter_value":filter_value,"broker_language":"","broker_code":""};
+
+            if (filter_value) {
+                fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'in-auth-token':'guest'
+                    },
+                    body: JSON.stringify(params)
+                })
+                .then(response => response.json())
+                .then(data => {
+                   let res =data;
+                  if(res.status == 0){
+                        if(type == 'pickup'){
+                        let state_list =res.data;
+                        state_list.forEach(item => {
+                           let option = document.createElement('option');
+                            option.value = item;
+                            option.textContent= item;
+                            let selectElement = document.getElementById('pickupState');
+                            selectElement.appendChild(option);
+                        });
+                        }else if(type == 'residence'){
+                            let res_state_list =res.data;
+							console.log("res_state_list",res_state_list)
+                            res_state_list.forEach(item => {
+                            let res_option = document.createElement('option');
+							res_option.value =item.state;
+                            res_option.textContent=item.state;
+                            stateSelect.appendChild(res_option);
+                        });
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching states:', error);
+                    alert('Unable to load '+master_name+'. Please try again.');
+                });
+            }
+        }
+
+        function getQuote() {
+            const pickupCountry = document.getElementById('pickupCountry').value;
+            const pickupState = document.getElementById('pickupState').value;
+            const tripStart = document.getElementById('tripStart').value;
+            const tripEnd = document.getElementById('tripEnd').value;
+            const dropoffTime = document.querySelector('input[name="dropoffTime"]:checked').value;
+            const residenceCountry = document.getElementById('residenceCountry').value;
+            const residenceState = document.getElementById('residenceState').value;
+
+            if (pickupCountry && pickupState && tripStart && tripEnd && residenceCountry) {
+               const queryParams = new URLSearchParams({
+                    pickupCountry: pickupCountry,
+                    pickupState: pickupState,
+                    tripStart: tripStart,
+                    tripEnd: tripEnd,
+                    dropoffTime: dropoffTime,
+                    residenceCountry: residenceCountry,
+                    residenceState: residenceState,
+                });
+
+                let redirectUrl = `${domain}/b2c/#/quote/policy?${queryParams}`;
+                window.location.href = redirectUrl;
+            } else {
+                alert('Please fill all the fields.');
+            }
+        }
+    </script>
+
+</body>
+</html>
