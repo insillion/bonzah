@@ -33,11 +33,12 @@ Bonzah allows some liberties here, but we think the most important information t
 
 ## Collision Damage Waiver (CDW) - *Rental Vehicle Protection*
 Covers damages to the rental vehicle when there is an accident with another vehicle. 
-- Primary insurance for accidents between vehicles. 
-- Covers up to $35,000 in damage to the rental vehicle.
-- Up to $500 deductible. 
-- Renter may still be liable for any damage done to third parties.
-
+- Up to $35,000 Damage
+- $1,000 Deductible
+- Primary Insurance for accidents between vehicles
+- Does not cover non-rental vehicle damage​
+- Excludes comprehensive coverage, such as mechanical issues caused by misuse, theft, vandalism, single car accidents.
+- [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.Collision-Damage-Warranty.Brochure.pdf)
 <br>
 
 ## Renter's Contingent Liability Insurance (RCLI) - *Protection for Damages Done to Third Parties*
@@ -47,6 +48,7 @@ Covers 3rd parties' property and injury when renter is at fault; does not cover 
 - Bodily Injury Claims - Up to the legal state minimum requirements per person and total.
 - Property Damage - Up to the legal state minimum requirements.
 - Does not cover damage to the rental vehicle.
+- [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.RCLI.Brochure.pdf)
 
 <br>
 
@@ -58,7 +60,7 @@ Coverage is in Excess of Any Other Primary Coverage
 - Excess Property Damage up to $10,000 beyond any primary coverage.
 - Does not cover damage to the rental vehicle.
 - SLI is an optional insurance for those who want more extensive coverage.
-
+- [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.SLI.Only.Brochure.pdf)
 <br>
 
 ## Personal Accident Insurance (PAI)
@@ -68,7 +70,7 @@ Covers life, medical expenses, and lost or damaged items. Personal Accident Insu
 - Accidental Medical Expense - $1,000
 - Personal Effects Coverage - $500
 - Does not cover damages to the rental vehicle.
-
+- [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/PAI.PEI.Brochure-v2.pdf)
 <br>
 
 ## Complete Auto Guard for Renters and Additional Drivers Listed on the Rental Contract
