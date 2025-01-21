@@ -1,6 +1,6 @@
-### Create New Endorsement for Date Change
+### Policy Date Change Modification request
 
-This endpoint allows you to create a new endorsement for a policy to change policy start date & policy end date.
+This endpoint allows the creation of a new endorsement (modification) of a policy to change its start and end dates.
 
 \*Please note - Postponing the start date is allowed, however bringing the start date forward is not supported at this time.
 
@@ -20,15 +20,15 @@ For all scenarios, the customer will receive appropriate communication/confirmat
     
 - eproposal_id (string, optional): The ID of the e-proposal.
     
-- policy_id (string, optional): The ID of the policy.
+- policy_id (string, Required): The ID of the policy.
     
-- policy_start_date (string, optional): The start date of the policy. (MM/DD/YYYY HH:mm:ss) UTC time
+- policy_start_date (string, Required): The start date of the policy. (MM/DD/YYYY HH:mm:ss) UTC time
     
-- policy_end_date (string, optional): The end date of the policy. (MM/DD/YYYY HH:mm:ss) UTC time
+- policy_end_date (string, Required): The end date of the policy. (MM/DD/YYYY HH:mm:ss) UTC time
     
 - endorsement_remarks (string, optional): Any remarks related to the endorsement.
     
-- finalize (integer, optional): Indicates whether the endorsement is to be finalized. Once finalized the endorsement can not be modified. Tag value should pass "1". As of now "0" will not allow.
+- finalize (integer, Required): Indicates whether the endorsement is to be finalized. Once finalized the endorsement can not be modified. Tag value should pass "1". As of now "0" will not allow.
     
 
 **Response**  

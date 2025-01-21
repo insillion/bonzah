@@ -1,4 +1,4 @@
-### Remove Pending Endorsement Requests
+#### **Remove Pending Endorsement**
 
 This endpoint allows you to remove pending endorsement. The eproposal_id parameter in the query string should be provided to identify the endorsement.
 

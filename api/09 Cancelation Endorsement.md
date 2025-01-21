@@ -1,6 +1,10 @@
 ### Add New Endorsement for Cancel Policy
 
-This endpoint allows you to add a new endorsement for cancel a policy.
+This endpoint is used to request the cancelation of an in-effect policy.
+
+All Cancelation requests are subject to approval by Bonzah. If approved, a refund is triggered where the amount is reinstated to the Rental's credit balance.
+
+The customer will be notified via mail of all decisions (approved/declined).
 
 **Request Body**
 
@@ -8,9 +12,7 @@ This endpoint allows you to add a new endorsement for cancel a policy.
     
 - `eproposal_id` (string): The ID of the eproposal.
     
-- `policy_cancel_date` (string): The date on which the policy is to be cancelled. (MM/DD/YYYY HH:mm:ss) UTC time
-    
-- `policy_id` (string): The ID of the policy.
+- `policy_id` (string,Required): The ID of the policy.
     
 - `endorsement_remarks` (string): Remarks for the endorsement.
     

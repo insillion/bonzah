@@ -1,7 +1,10 @@
+### Insured's Information Modification
+
 This endpoint allows you to create a new endorsement to change personal details
 
 There is no approval process for this request. Confirmation of the changes made are sent to the customer via email.
 
+This API endpoint can also be used to save a partially completed endorsement that can be completed at a later time (using the endorsement_id and eproposal_id).
 
 **Request Body**
 
@@ -11,31 +14,29 @@ The request should include the following parameters in the raw request body:
     
 - `eproposal_id` (string): The ID of the e-proposal.
     
-- `policy_id` (string): The ID of the policy.
+- `policy_id` (string,Required): The ID of the policy.
     
-- `first_name` (string): The first name of the policyholder.
+- `first_name` (string,Required): The first name of the policyholder.
     
-- `last_name` (string): The last name of the policyholder.
+- `last_name` (string,Required): The last name of the policyholder.
     
-- `address_line_1` (string): The first line of the address.
+- `address_line_1` (string,Required): The first line of the address.
     
-- `address_line_2` (string): The second line of the address.
+- `address_line_2` (string,Optional): The second line of the address.
     
-- `zip_code` (string): The zip code of the address.
+- `zip_code` (string,Required): The zip code of the address.
     
-- `country` (string): The country of the address.
+- `country` (string,Required): The country of the address.
     
-- `city` (string): The city of the address.
+- `city` (string,Required): The city of the address.
     
-- `state` (string): The state of the address.
+- `state` (string,Required): The state of the address.
     
-- `dob` (string): The date of birth of the policyholder.
+- `dob` (string,Required): The date of birth of the policyholder.
     
-- `email` (string): The email address of the policyholder.
+- `phone_no` (string,Required): The phone number of the policyholder.
     
-- `phone_no` (string): The phone number of the policyholder.
-    
-- `finalize` (integer): A flag to indicate whether the endorsement should be finalized (0 for false, 1 for true). Once finalized the quote can not be modified
+- `finalize` (integer): A flag to indicate whether the endorsement should be finalized (0 for false, 1 for true). Once finalized the endorsement can not be modified
     
 
 **Response:**

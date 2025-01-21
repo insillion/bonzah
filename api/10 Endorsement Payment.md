@@ -1,12 +1,12 @@
-### Bonzah ePayment
+### Endorsement Payment
 
 This endpoint allows the user to make an HTTP POST request to process the payment of the endorsement.
 
 #### Request Body
 
-- `payment_id` (string): The ID of the ePayment to be processed.
+- `payment_id` (string,Required): The ID of the ePayment to be processed.
     
-- `amount` (number): The amount of the premium for the ePayment.
+- `amount` (number,Required): The amount of the premium for the ePayment.
     
 
 #### Response

@@ -24,39 +24,39 @@ To finalize a quote (where no modifications can be made), the "finalize" tag sho
 **Request Body**  
 The request body should be in JSON format and include the following parameters:
 
-| Key | Type | Description |Requirement|
-| --- |:---:| --- |:---:|
-| quote_id | String | Unique identifier for the quote <br> pass a previously generated ID to fetch a previously saved Quote |Optional|
-| trip_start_date | date | Start date of the trip (MM/DD/YYYY HH:mm:ss) UTC time |Required|
-| trip_end_date | date | End date of the trip (MM/DD/YYYY HH:mm:ss) UTC time |Required|
-| pickup_country | String | Country for car pickup. Should be as per master |Required|
-| pickup_state | String | State for car pickup. Should be as per master |Required|
-| drop_off_time | String |**Same** - If the time of vehicle drop-off is the same as the time of vehicle pick-up. for example, if the rental starts on the 1st and ends on the 2nd, the system calculates the insurance premium for 1 day.  <br>  <br>**Later** - If the time of vehicle drop-off is later than the time of pickup. For example,  if the rental starts on the 1st and ends on the 2nd, the system calculates the insurance premium for 2 days. to account for more that 24h of coverage. <br><br> Defaults to *Same* if left blank |Optional|
-| residence_country | String | Country of residence. Should be as per master |Required|
-| residence_state | String | State of residence. Should be as per master |Optional|
-| cdw_cover | Boolean | Whether Collision Damage Waiver is included |Required if Opted|
-| rcli_cover | Boolean | Whether Rental Car Liability Insurance is included |Required if Opted|
-| sli_cover | Boolean | Whether Supplemental Liability Insurance is included |Required if Opted|
-| pai_cover | Boolean | Whether Personal Accident Insurance is included |Required if Opted|
-| first_name | String | First name of the insured person |Required|
-| last_name | String | Last name of the insured person |Required|
-| dob | date | Date of birth of the insured person (MM/DD/YYYY) |Required|
-| pri_email_address | String | Primary email address of the insured person.  <br>  <br>\*Emails with policy confirmation and Pre-Post trip inspection links are send to this email ID. To view policy COIs call the requests 6a,6b,6c,6d after policy issuance |Required|
-| alt_email_address | String | Alternate email address of the insured person |Optional|
-| address_line_1 | String | Address line 1 of the insured person |Required|
-| address_line_2 | String | Address line 2 of the insured person |Optional|
-| licence_no | String | Driver's licence no of the insured person |Optional|
-| zip_code | String | Zip code of the insured person |Required|
-| inspection_done | String | Indicates by whom the inspection should be carried out by. Pass "**Renter**" to send the inspection emails to the "pri_email_address", else pass the value as blank or "**Rental Agency**" to send the email to the Rental Agency's email inbox. Mandatory if CDW cover selected |Required for CDW - Defaults to Rental Agency email if empty|
-| source | String | Source of the request - Send value as "**API**" |Required|
-| phone_no | String | Phone number of the policy holder. |Required|
-| finalize | Number | 0 - Draft quote  <br>1 - Finalize quote  <br>Once finalized the quote can not be modified |Required to Finalize and Issue policy|
+| Key | Type | Description |  |
+| --- | --- | --- | --- |
+| quote_id | String | Unique identifier for the quote | Optional |
+| trip_start_date | date | Start date of the trip (MM/DD/YYYY HH:mm:ss) UTC time | Required |
+| trip_end_date | date | End date of the trip (MM/DD/YYYY HH:mm:ss) UTC time | Required |
+| pickup_country | String | Country for car pickup. Should be as per master | Required |
+| pickup_state | String | State for car pickup. Should be as per master | Required |
+| drop_off_time | String | Time for car drop-off.  <br>  <br>Same - If the time of vehicle drop-off is the same as the time of vehicle pick-up.  <br>  <br>Later - If the time of vehicle drop-off is later than the time of pickup | Required |
+| residence_country | String | Country of residence. Should be as per master | Required |
+| residence_state | String | State of residence. Should be as per master | Optional |
+| cdw_cover | Boolean | Whether Collision Damage Waiver is included | Required if Opted |
+| rcli_cover | Boolean | Whether Rental Car Liability Insurance is included | Required if Opted |
+| sli_cover | Boolean | Whether Supplemental Liability Insurance is included | Required if Opted |
+| pai_cover | Boolean | Whether Personal Accident Insurance is included | Required if Opted |
+| first_name | String | First name of the insured person | Required |
+| last_name | String | Last name of the insured person | Required |
+| dob | date | Date of birth of the insured person (MM/DD/YYYY) | Required |
+| pri_email_address | String | Primary email address of the insured person.  <br>  <br>\*Emails with policy confirmation and Pre-Post trip inspection links are send to this email ID. To view policy COIs call the requests 6a,6b,6c,6d after policy issuance | Required |
+| alt_email_address | String | Alternate email address of the insured person | Optional |
+| address_line_1 | String | Address line 1 of the insured person | Required |
+| address_line_2 | String | Address line 2 of the insured person | Optional |
+| licence_no | String | Driver's licence no of the insured person | Optional |
+| zip_code | String | Zip code of the insured person | Required |
+| inspection_done | String | Indicates if inspection is done by. If it b2c pass Renter and if it is loopit or b2b pass Renter/Rental Agency. Mandatory for if CDW cover select | Required for CDW - Defaults to Rental Agency email if empty |
+| source | String | Source of the request (Ex: API) | Required |
+| phone_no | String | Phone number of the insured person (must be 11 digits long, including the country code without the + symbol, followed by the mobile number). | Required |
+| finalize | Number | 0 - Draft quote  <br>1 - Finalize quote  <br>Once finalized the quote can not be modified | Required to Finalize and Issue policy |
 
 ### Response
 
 The response will be in JSON format and will include quote_id and premium details. quote_id should be passed if you modify any details on second time hit other wise new quote will be created.
 
-
+StartFragment
 
 | **Field Name** | **Type** | **Description** |
 | --- | --- | --- |
@@ -107,5 +107,5 @@ The response will be in JSON format and will include quote_id and premium detail
 | `data.select_country` | String | Selected country. Example: `United States`. |
 | `data.select_state` | String | Selected state. Example: `New York`. |
 | `data.country` | String | Country code. Example: `US`. |
-| `data.source` | String | Source of the request. Example: `loopit`. |
-| `data.broker_name` | String | Name of the broker. Example: `Loopit Group`. |
+| `data.source` | String | Source of the request. Example: API. |
+| `data.broker_name` | String | Name of the Rental |
