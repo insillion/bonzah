@@ -16,6 +16,8 @@ The customer will be notified via mail of all decisions (approved/declined).
     
 - `endorsement_remarks` (string): Remarks for the endorsement.
     
+- endo_source (String , Required ) Source of the request (Ex: API)
+    
 - `finalize` (integer): Indicates whether the endorsement is to be finalized (0 for false, 1 for true).
     
 

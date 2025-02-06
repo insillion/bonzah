@@ -36,6 +36,8 @@ The request should include the following parameters in the raw request body:
     
 - `phone_no` (string,Required): The phone number of the policyholder.
     
+- endo_source (String , Required ) Source of the request (Ex: API)
+    
 - `finalize` (integer): A flag to indicate whether the endorsement should be finalized (0 for false, 1 for true). Once finalized the endorsement can not be modified
     
 

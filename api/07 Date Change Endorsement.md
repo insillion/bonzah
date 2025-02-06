@@ -28,6 +28,8 @@ For all scenarios, the customer will receive appropriate communication/confirmat
     
 - endorsement_remarks (string, optional): Any remarks related to the endorsement.
     
+- endo_source (String , Required ) Source of the request (Ex: API)
+    
 - finalize (integer, Required): Indicates whether the endorsement is to be finalized. Once finalized the endorsement can not be modified. Tag value should pass "1". As of now "0" will not allow.
     
 
