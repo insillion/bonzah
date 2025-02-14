@@ -83,9 +83,9 @@ StartFragment
 | `data.rcli_rate` | String | Rate for RCLI coverage. Example: `"$14.88 / 24 hours"`. |
 | `data.sli_rate` | String | Rate for SLI coverage. Example: `"$11.90 / 24 hours"`. |
 | `data.pai_rate` | String | Rate for PAI coverage. Example: `"$6.90 / 24 hours"`. |
-| `data.f_cov_lable_prem1` | String | Coverage label premium 1. Example: `"$25,000.00"`. |
-| `data.f_cov_lable_prem2` | String | Coverage label premium 2. Example: `"$50,000.00"`. |
-| `data.f_cov_lable_prem3` | String | Coverage label premium 3. Example: `"$10,000.00"`. |
+| `data.f_cov_lable_prem1` | String | RCLI Coverage limit for Bodily Injury - Per Person : Example: `"$25,000.00"`. |
+| `data.f_cov_lable_prem2` | String | RCLI Coverage limit for Bodily Injury - Aggregate : Example: `"$50,000.00"`. |
+| `data.f_cov_lable_prem3` | String | RCLI Coverage limit for Property Damage : Example: `"$10,000.00"`. |
 | `data.coverage_information` | Array of Objects | List of optional coverages and their details. |
 | `data.coverage_information[].optional_addon_cover_name` | String | Name of the optional addon cover. Example: `Collision Damage Waiver (CDW)`. |
 | `data.coverage_information[].opted` | String | Indicates if the addon cover is opted. Example: `Yes`. |
