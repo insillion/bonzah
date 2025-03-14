@@ -47,7 +47,7 @@ The request body should be in JSON format and include the following parameters:
 | address_line_2 | String | Address line 2 of the insured person | Optional |
 | licence_no | String | Driver's licence no of the insured person | Optional |
 | zip_code | String | Zip code of the insured person | Required |
-| inspection_done | String | Indicates if inspection is done by. If it b2c pass Renter and if it is loopit or b2b pass Renter/Rental Agency. Mandatory for if CDW cover select | Required for CDW - Defaults to Rental Agency email if empty |
+| inspection_done | String | Specifies the receiver of the vehicle Inspection emails. if inspection is to be done by the customer "**Renter"** is to be passed.  <br>  <br>If the vehicle inspections are to be carried out by the Rental Agency pass "**Rental Agency".**  <br>  <br>This is Mandatory if the CDW cover is selected | Required for CDW |
 | source | String | Source of the request (Ex: API) | Required |
 | phone_no | String | Phone number of the insured person (must be 11 digits long, including the country code without the + symbol, followed by the mobile number). | Required |
 | finalize | Number | 0 - Draft quote  <br>1 - Finalize quote  <br>Once finalized the quote can not be modified | Required to Finalize and Issue policy |
@@ -83,9 +83,9 @@ StartFragment
 | `data.rcli_rate` | String | Rate for RCLI coverage. Example: `"$14.88 / 24 hours"`. |
 | `data.sli_rate` | String | Rate for SLI coverage. Example: `"$11.90 / 24 hours"`. |
 | `data.pai_rate` | String | Rate for PAI coverage. Example: `"$6.90 / 24 hours"`. |
-| `data.f_cov_lable_prem1` | String | Coverage label premium 1. Example: `"$25,000.00"`. |
-| `data.f_cov_lable_prem2` | String | Coverage label premium 2. Example: `"$50,000.00"`. |
-| `data.f_cov_lable_prem3` | String | Coverage label premium 3. Example: `"$10,000.00"`. |
+| `data.f_cov_lable_prem1` | String | RCLI Coverage limit for Bodily Injury - Per Person : Example: `"$25,000.00"`. |
+| `data.f_cov_lable_prem2` | String | RCLI Coverage limit for Bodily Injury - Aggregate : Example: `"$50,000.00"`. |
+| `data.f_cov_lable_prem3` | String | RCLI Coverage limit for Property Damage : Example: `"$10,000.00"`. |
 | `data.coverage_information` | Array of Objects | List of optional coverages and their details. |
 | `data.coverage_information[].optional_addon_cover_name` | String | Name of the optional addon cover. Example: `Collision Damage Waiver (CDW)`. |
 | `data.coverage_information[].opted` | String | Indicates if the addon cover is opted. Example: `Yes`. |
