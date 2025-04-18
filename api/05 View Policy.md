@@ -1,4 +1,6 @@
-This endpoint makes an HTTP GET request to retrieve information about a specific policy. The `policy_id` parameter in the query string should be provided to identify the policy.
+# **GET** `/api/v1/Bonzah/policy`
+
+This `policy` endpoint makes an HTTP GET request to retrieve information about a specific policy. The `policy_id` parameter in the query string should be provided to identify the policy.
 
 ### Request Body
 

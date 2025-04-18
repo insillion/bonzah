@@ -1,3 +1,5 @@
+# **GET** `/api/v1/Bonzah/endorsement_completed`
+
 This endpoint sends an HTTP GET request to retrieve information about completed endorsements for a specific policy. The `policy_id` query parameter should be included in the request URL to specify the policy for which the endorsement information is required.
 
 ### Request Body

@@ -1,12 +1,12 @@
-## Bonzah Quote API
+# **POST** `/api/v1/Bonzah/quote`
 
-This API endpoint generates an insurance quote based on the data passed for the rental.
+This `quote` API endpoint generates an insurance quote based on the data passed for the rental
+
 This API endpoint can also be used to save a partially completed quote that can be completed at a later time (using the quote_id).
 
 To finalize a quote (where no modifications can be made), the "finalize" tag should pass "1" as it's value.
 
-*Please note - Once the quote has been saved, finalized and issued - Policy modifications will not allow the change of the customer's email address.
-
+\*Please note - Once the quote has been saved, finalized and issued - Policy modifications will not allow the change of the customer's email address.
 
 ### Request
 
@@ -45,11 +45,18 @@ The request body should be in JSON format and include the following parameters:
 | alt_email_address | String | Alternate email address of the insured person | Optional |
 | address_line_1 | String | Address line 1 of the insured person | Required |
 | address_line_2 | String | Address line 2 of the insured person | Optional |
-| licence_no | String | Driver's licence no of the insured person | Optional |
 | zip_code | String | Zip code of the insured person | Required |
 | inspection_done | String | Specifies the receiver of the vehicle Inspection emails. if inspection is to be done by the customer "**Renter"** is to be passed.  <br>  <br>If the vehicle inspections are to be carried out by the Rental Agency pass "**Rental Agency".**  <br>  <br>This is Mandatory if the CDW cover is selected | Required for CDW |
 | source | String | Source of the request (Ex: API) | Required |
 | phone_no | String | Phone number of the insured person (must be 11 digits long, including the country code without the + symbol, followed by the mobile number). | Required |
+| license_no | String | Driver's licence no of the insured person | Required |
+| drivers_license_state | String | State that issued the driver's license of the insured person | Required |
+| age_first_licensed | Integer | Age when the insured person was first licensed to drive | Required |
+| year | Integer | The model year of the vehicle | Required |
+| make | String | The manufacturer of the vehicle (e.g., Toyota, Ford) | Required |
+| model | String | The specific model of the vehicle (e.g., Camry, Mustang) | Required |
+| license_plate | String | The vehicle's license plate number. | Required |
+| state_licensed_in | String | The state where the vehicle is licensed (e.g., CA, NY). | Required |
 | finalize | Number | 0 - Draft quote  <br>1 - Finalize quote  <br>Once finalized the quote can not be modified | Required to Finalize and Issue policy |
 
 ### Response
@@ -109,3 +116,11 @@ StartFragment
 | `data.country` | String | Country code. Example: `US`. |
 | `data.source` | String | Source of the request. Example: API. |
 | `data.broker_name` | String | Name of the Rental |
+| `data.licence_no` | String | Driver's license number of the insured person. Example: `D1234567`. |
+| `data.drivers_license_state` | String | State that issued the driver's license of the insured person. Example: `NY`. |
+| `data.age_first_licensed` | Integer | Age when the insured person was first licensed to drive. Example: `18`. |
+| `data.year` | Integer | The model year of the vehicle. Example: `2022`. |
+| `data.make` | String | The manufacturer of the vehicle. Example: `Toyota`. |
+| `data.model` | String | The specific model of the vehicle. Example: `Mustang`. |
+| `data.license_plate` | String | The vehicle's license plate number. Example: `ABC-1234`. |
+| `data.state_licensed_in` | String | The state where the vehicle is licensed. Example: `NY`. |

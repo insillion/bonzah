@@ -1,3 +1,5 @@
+# **GET** `/api/v1/Bonzah/endorsement_pending`
+
 ### Retrieve Pending Endorsement Details
 
 This endpoint makes an HTTP GET request to retrieve pending endorsement details for a specific policy.

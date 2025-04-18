@@ -1,6 +1,8 @@
+# **POST** `/api/v1/Bonzah/epayment`
+
 ### Endorsement Payment
 
-This endpoint allows the user to make an HTTP POST request to process the payment of the endorsement.
+This `epayment` endpoint allows the user to make an HTTP POST request to process the payment of the endorsement.
 
 #### Request Body
 

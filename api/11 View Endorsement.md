@@ -1,4 +1,6 @@
-# Retrieve Bonzah Endorsement Details
+# **GET** `/api/v1/Bonzah/endorsement`
+
+### Retrieve Bonzah Endorsement Details
 
 This endpoint allows you to retrieve the details of a specific Bonzah endorsement by providing the endorsement ID as a query parameter.
 

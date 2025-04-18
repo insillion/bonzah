@@ -1,19 +1,19 @@
-### **GET** `/api/v1/Bonzah/master`
+# **GET** `/api/v1/Bonzah/master`
 
-`master` endpoint allows user to load master data based on the below requests.
+This `master` API endpoint allows the user to load master data based on the below requests.
 
-#### Request Body
+### Request Body
 
-- `master_name` (string, required): The name of the master to be created   
-- `values` (string, required): The values associated with the master    
-- `filter` (string, required): The filter criteria for the master
-- `filter_value` (string, required): The value for the filter criteria
-
-<br>
+- `master_name` (string, required): The name of the master to be created.
+    
+- `values` (string, required): The values associated with the master.
+    
+- `filter` (string, required): The filter criteria for the master.
+    
+- `filter_value` (string, required): The value for the filter criteria.
+    
 
 ---
-
-<br>
 
 **Payload for Country Master:-**
 
@@ -36,12 +36,7 @@ This will provide pickup country list
 | `data.country` | Array | An array of country names included in the response. |
 | `data.country[]` | String | A single country name from the array. Example: `United States`. |
 
-<br>
-
 ---
-
-<br>
-
 
 **Payload for Zipcode master:-**
 
@@ -65,12 +60,7 @@ city,country & state will be fetched based on the given zipcode
 | `data.country` | String | The country code. Example: `US` for the United States. |
 | `data.state` | String | The name of the state. Example: `Massachusetts`. |
 
-<br>
-
 ---
-
-<br>
-
 
 **Payload for State Master**:-
 
@@ -92,12 +82,7 @@ This will provide pickup state based on the filtered country
 | `data` | Array | An array containing a list of U.S. states and territories. Each element is a string representing the name of a state or territory. |
 | `data[n]` | String | The name of a state or territory, where `n` is the index in the array. Example: `Alabama`, `Alaska`, `New York`, etc. |
 
-<br>
-
 ---
-
-<br>
-
 
 **Payload for Residence Country Master**:-
 
@@ -120,12 +105,7 @@ This will provide residence country lilst
 | `data[n]` | Object | An object containing country information, where `n` is the index in the array. |
 | `data[n].country` | String | The name of a country, where `n` is the index in the array. Examples include "Afghanistan", "Albania", etc. |
 
-<br>
-
 ---
-
-<br>
-
 
 **Payload for Residence State Master:-**
 
@@ -145,5 +125,4 @@ This will provide residence state lists based on filtered country
 | **status** | `integer` | Represents the status of the response. `0` indicates a successful request, while other values may indicate different statuses (e.g., errors). |
 | **txt** | `string` | A message related to the status. This field may contain additional information or error messages; in this case, it is an empty string. |
 | **data** | `array` | An array of objects, each representing a state or territory. Each object contains: |
-| **data[].state** | `string` | The name of the state or territory (e.g., "Alabama", "California"). |
-
+| **data\[\].state** | `string` | The name of the state or territory (e.g., "Alabama", "California"). |
