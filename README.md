@@ -32,12 +32,13 @@ Bonzah allows some liberties here, but we think the most important information t
 <br>
 
 ## Collision Damage Waiver (CDW) - *Rental Vehicle Protection*
-Covers damages to the rental vehicle when there is an accident with another vehicle. 
+Covers physical damages to the rental vehicle when there is an accident with another vehicle. 
 - Up to $35,000 Damage
 - $1,000 Deductible
 - Primary Insurance for accidents between vehicles
 - Does not cover non-rental vehicle damage​
 - Excludes comprehensive coverage, such as mechanical issues caused by misuse, theft, vandalism, single car accidents.
+- Not for commercial use. Not compatible with cars for hire and delivery services such as Uber Lyft, DoorDash.
 - [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.Collision-Damage-Warranty.Brochure.pdf)
 <br>
 
