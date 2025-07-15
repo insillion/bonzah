@@ -57,6 +57,13 @@ The request body should be in JSON format and include the following parameters:
 | model | String | The specific model of the vehicle (e.g., Camry, Mustang) | Required |
 | license_plate | String | The vehicle's license plate number. | Required |
 | state_licensed_in | String | The state where the vehicle is licensed (e.g., CA, NY). | Required |
+| vehicle_class | String | The vechicle's class | Optional |
+| additional_drivers\[\] | array | An array of objects, where each object represents an additional driver.  <br>\[ first_name, last_name, email, dob and phone_no \] | Optional |
+| first_name | string | The additional driver's first name. | Required |
+| last_name | string | The additional driver's last name. | Required |
+| email | string | The additional driver's email address. | Required |
+| dob | string | The additional driver's date of birth. Format: MM/DD/YYYY. | Required |
+| phone_no | string | Must be 11 digits: country code (no +) + mobile number. | Required |
 | finalize | Number | 0 - Draft quote  <br>1 - Finalize quote  <br>Once finalized the quote can not be modified | Required to Finalize and Issue policy |
 
 ### Response
@@ -78,10 +85,10 @@ StartFragment
 | `data.trip_start_date` | String (DateTime) | The start date and time of the trip. Format: `MM/DD/YYYY HH:MM:SS`. UTC time |
 | `data.trip_end_date` | String (DateTime) | The end date and time of the trip. Format: `MM/DD/YYYY HH:MM:SS`. UTC time |
 | `data.pickup_country` | String | Country of pickup. Example: `United States`. |
-| `data.pickup_state` | String | State of pickup. Example: `New York`. |
+| `data.pickup_state` | String | State of pickup. Example: `California`. |
 | `data.residence_country` | String | The residence country of the user. Example: `United States`. |
 | `data.drop_off_time` | String | Drop-off time. Example: `Same`. |
-| `data.residence_state` | String | The residence state of the user. Example: `New York`. |
+| `data.residence_state` | String | The residence state of the user. Example: `California`. |
 | `data.cdw_cover` | Boolean | Indicates if Collision Damage Waiver (CDW) coverage is opted. |
 | `data.rcli_cover` | Boolean | Indicates if Renter's Contingent Liability Insurance (RCLI) coverage is opted. |
 | `data.sli_cover` | Boolean | Indicates if Supplemental Liability Insurance (SLI) coverage is opted. |
@@ -100,11 +107,11 @@ StartFragment
 | `data.coverage_information[].optional_addon_premium` | Float | Premium for the addon cover. Example: `23.78`. |
 | `data.coverage_information[].added` | Boolean | Indicates if the addon is added. Example: `true`. |
 | `data.total_premium` | Float | Total premium calculated. Example: `60.26`. |
-| `data.first_name` | String | The first name of the user. Example: `Loopit`. |
-| `data.last_name` | String | The last name of the user. Example: `User`. |
+| `data.first_name` | String | The first name of the user. Example: `John`. |
+| `data.last_name` | String | The last name of the user. Example: `Appleseed`. |
 | `data.dob` | String (Date) | Date of birth of the user. Format: `MM/DD/YYYY`. Example: `06/25/1975`. |
-| `data.pri_email_address` | String | Primary email address of the user. Example: `loopituser@gmail.com`. |
-| `data.alt_email_address` | String | Alternate email address of the user. Example: `testuser@gmail.com`. |
+| `data.pri_email_address` | String | Primary email address of the user. Example: `johnappleseed@gmail.com`. |
+| `data.alt_email_address` | String | Alternate email address of the user. Example: `janeappleseed@gmail.com`. |
 | `data.address_line_1` | String | First line of the address. Example: `address1`. |
 | `data.address_line_2` | String | Second line of the address. Example: `address2`. |
 | `data.zip_code` | String | Zip code of the address. Example: `01061`. |
@@ -112,15 +119,21 @@ StartFragment
 | `data.state` | String | State of the address. Example: `Massachusetts`. |
 | `data.city` | String | City of the address. Example: `Northampton`. |
 | `data.select_country` | String | Selected country. Example: `United States`. |
-| `data.select_state` | String | Selected state. Example: `New York`. |
+| `data.select_state` | String | Selected state. Example: `California`. |
 | `data.country` | String | Country code. Example: `US`. |
 | `data.source` | String | Source of the request. Example: API. |
 | `data.broker_name` | String | Name of the Rental |
 | `data.licence_no` | String | Driver's license number of the insured person. Example: `D1234567`. |
-| `data.drivers_license_state` | String | State that issued the driver's license of the insured person. Example: `NY`. |
+| `data.drivers_license_state` | String | State that issued the driver's license of the insured person. Example: `CA`. |
 | `data.age_first_licensed` | Integer | Age when the insured person was first licensed to drive. Example: `18`. |
 | `data.year` | Integer | The model year of the vehicle. Example: `2022`. |
 | `data.make` | String | The manufacturer of the vehicle. Example: `Toyota`. |
 | `data.model` | String | The specific model of the vehicle. Example: `Mustang`. |
 | `data.license_plate` | String | The vehicle's license plate number. Example: `ABC-1234`. |
-| `data.state_licensed_in` | String | The state where the vehicle is licensed. Example: `NY`. |
+| `data.state_licensed_in` | String | The state where the vehicle is licensed. Example: `CA`. |
+| `data.vehicle_class` | String | The Vehicle Class. Example: `SUV` |
+| `data.additional_drivers[].first_name` | String | Additional driver's first name.  <br>Example: `Mike` |
+| `data.additional_drivers[].last_name` | String | Additional driver's last name.  <br>Example: `T` |
+| `data.additional_drivers[].email` | String | Additional driver's email.  <br>Example: `miket@gmail.com` |
+| `data.additional_drivers[].dob` | String | Additional driver's date of birth`(MM/DD/YYYY).`  <br>Example: `07/29/1990` |
+| `data.additional_drivers[].phone_no` | String | Additional driver's phone number.  <br>Example : `13251233246` |
