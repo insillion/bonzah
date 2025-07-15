@@ -4,35 +4,37 @@
 
 This endpoint allows the creation of a new endorsement (modification) of a policy to change its start and end dates.
 
-\*Please note - Postponing the start date is allowed, however bringing the start date forward is not supported at this time.
+**\*Please note** - Postponing the start date is allowed, however bringing the start date forward is not supported at this time.
 
 For scenarios where there is no change in the net policy duration - No aditional premium / refund is calculated, and the shift in dates is accepted without any approval.
 
-When there is an extension in the number of days, the "10. Endorsement Payment" API request must be called to confirm the collection of the additional premium.
+When there is an **extension** in the number of days, the "**10\. Endorsement Payment**" API request must be called to confirm the collection of the additional premium.
 
 In the instance where a refund amount is calculated (Reduction in policy duration / Cancelation of policy). the modification/cancelation request is then sent to Bonzah for approval. Once approved, the refund value is reinstated in the Rental's credit limit.
 
-The status of the endorsement once submitted for approval can be received via the "12. Endorsement Pending" API request.
+The status of the endorsement once submitted for approval can be received via the **"12. Endorsement Pending"** API request.
+
+The list of all completed endorsement via **"13. List of Endorsements"** API request.
 
 For all scenarios, the customer will receive appropriate communication/confirmation via mail (pri_email_address)
 
 **Request Body**
 
-- endorsement_id (string, optional): The ID of the endorsement.
+- `endorsement_id` (string, Required): Leave blank for a new request. (The endorsement ID will be created automatically).
     
-- eproposal_id (string, optional): The ID of the e-proposal.
+- `eproposal_id` (string, Required): Leave blank for a new request. (The e-proposal ID will be generated automatically).
     
-- policy_id (string, Required): The ID of the policy.
+- `policy_id` (string, Required): The ID of the policy.
     
-- policy_start_date (string, Required): The start date of the policy. (MM/DD/YYYY HH:mm:ss) UTC time
+- `policy_start_date` (string, Required): The start date of the policy. (MM/DD/YYYY HH:mm:ss) UTC time
     
-- policy_end_date (string, Required): The end date of the policy. (MM/DD/YYYY HH:mm:ss) UTC time
+- `policy_end_date` (string, Required): The end date of the policy. (MM/DD/YYYY HH:mm:ss) UTC time
     
-- endorsement_remarks (string, optional): Any remarks related to the endorsement.
+- `endorsement_remarks` (string, optional): Any remarks related to the endorsement.
     
-- endo_source (String , Required ) Source of the request (Ex: API)
+- `endo_source` (String , Required ) Source of the request (Ex: API)
     
-- finalize (integer, Required): Indicates whether the endorsement is to be finalized. Once finalized the endorsement can not be modified. Tag value should pass "1". As of now "0" will not allow.
+- `finalize` (integer, Required): Indicates whether the endorsement is to be finalized. Once finalized the endorsement can not be modified. Tag value should pass "1". "0" (or any other value) is not an accepted value.
     
 
 **Response**  
