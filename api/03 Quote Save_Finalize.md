@@ -57,7 +57,7 @@ The request body should be in JSON format and include the following parameters:
 | model | String | The specific model of the vehicle (e.g., Camry, Mustang) | Required |
 | license_plate | String | The vehicle's license plate number. | Required |
 | state_licensed_in | String | The state where the vehicle is licensed (e.g., CA, NY). | Required |
-| vehicle_class | String | The vechicle's class | Optional |
+| vehicle_class | String | The vechicle's class | Required |
 | additional_drivers\[\] | array | An array of objects, where each object represents an additional driver.  <br>\[ first_name, last_name, email, dob and phone_no \] | Optional |
 | first_name | string | The additional driver's first name. | Required |
 | last_name | string | The additional driver's last name. | Required |
