@@ -12,9 +12,9 @@ This API endpoint can also be used to save a partially completed endorsement tha
 
 The request should include the following parameters in the raw request body:
 
-- `endorsement_id` (string): The ID of the endorsement.
+- `endorsement_id` (string, Required): Leave blank for a new request. (The endorsement ID will be created automatically).
     
-- `eproposal_id` (string): The ID of the e-proposal.
+- `eproposal_id` (string, Required): Leave blank for a new request. (The e-proposal ID will be generated automatically).
     
 - `policy_id` (string,Required): The ID of the policy.
     

@@ -10,9 +10,9 @@ The customer will be notified via mail of all decisions (approved/declined).
 
 **Request Body**
 
-- `endorsement_id` (string): The ID of the endorsement.
+- `endorsement_id` (string, Required): Leave blank for a new request. (The endorsement ID will be created automatically).
     
-- `eproposal_id` (string): The ID of the eproposal.
+- `eproposal_id` (string, Required): Leave blank for a new request. (The e-proposal ID will be generated automatically).
     
 - `policy_id` (string,Required): The ID of the policy.
     
