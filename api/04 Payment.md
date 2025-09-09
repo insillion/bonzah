@@ -22,8 +22,8 @@ Response will includes policy_no and policy_id. Once payment done policy will be
 | `data` | Object | Contains the main data of the response. |
 | `data.quote_id` | String | Unique identifier for the quote. Example: `Q000000001703`. |
 | `data.policy_id` | String | Unique identifier for the policy. Example: `P000000001703`. |
-| `data.trip_start_date` | String (DateTime) | The start date and time of the trip. Format: `MM/DD/YYYY HH:MM:SS`. |
-| `data.trip_end_date` | String (DateTime) | The end date and time of the trip. Format: `MM/DD/YYYY HH:MM:SS`. |
+| `data.trip_start_date` | String (Date) | The start date and time of the trip. Format: `MM/DD/YYYY.` |
+| `data.trip_end_date` | String (Date) | The end date and time of the trip. Format: `MM/DD/YYYY.` |
 | `data.pickup_country` | String | Country of pickup. Example: `United States`. |
 | `data.pickup_state` | String | State of pickup. Example: `New York`. |
 | `data.residence_country` | String | The residence country of the user. Example: `United States`. |
