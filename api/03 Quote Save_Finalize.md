@@ -27,8 +27,8 @@ The request body should be in JSON format and include the following parameters:
 | Key | Type | Description |  |
 | --- | --- | --- | --- |
 | quote_id | String | Unique identifier for the quote | Optional |
-| trip_start_date | date | Start date of the trip (MM/DD/YYYY HH:mm:ss) UTC time | Required |
-| trip_end_date | date | End date of the trip (MM/DD/YYYY HH:mm:ss) UTC time | Required |
+| trip_start_date | date | Start date of the trip (MM/DD/YYYY) | Required |
+| trip_end_date | date | End date of the trip (MM/DD/YYYY) | Required |
 | pickup_country | String | Country for car pickup. Should be as per master | Required |
 | pickup_state | String | State for car pickup. Should be as per master | Required |
 | drop_off_time | String | Time for car drop-off.  <br>  <br>Same - If the time of vehicle drop-off is the same as the time of vehicle pick-up.  <br>  <br>Later - If the time of vehicle drop-off is later than the time of pickup | Required |
@@ -82,8 +82,8 @@ StartFragment
 | `data.policy_id` | String | Unique identifier for the policy. Example: `P000000001703`. |
 | `data.payment_id` | String | Unique identifier for the payment. It will be generated if quote is finalized wihtout any error. Example: `PY000000001056`. |
 | `data.total_amount` | Float | Total amount payable. Example: `60.26`. |
-| `data.trip_start_date` | String (DateTime) | The start date and time of the trip. Format: `MM/DD/YYYY HH:MM:SS`. UTC time |
-| `data.trip_end_date` | String (DateTime) | The end date and time of the trip. Format: `MM/DD/YYYY HH:MM:SS`. UTC time |
+| `data.trip_start_date` | String (Date) | The start date and time of the trip. Format: `MM/DD/YYYY.` |
+| `data.trip_end_date` | String (Date) | The end date and time of the trip. Format: `MM/DD/YYYY.` |
 | `data.pickup_country` | String | Country of pickup. Example: `United States`. |
 | `data.pickup_state` | String | State of pickup. Example: `California`. |
 | `data.residence_country` | String | The residence country of the user. Example: `United States`. |
