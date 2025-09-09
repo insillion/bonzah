@@ -18,8 +18,8 @@ The response will include the details of the policy identified by the `policy_id
 | `data.quote_id` | String | Unique identifier for the quote. Example: `Q000000001703`. |
 | `data.quote_no` | String | Quote number. Example: `Q202401000403`. |
 | `data.policy_id` | String | Unique identifier for the policy. Example: `P000000001703`. |
-| `data.trip_start_date` | String (DateTime) | The start date and time of the trip. Format: `MM/DD/YYYY HH:MM:SS`. UTC Time |
-| `data.trip_end_date` | String (DateTime) | The end date and time of the trip. Format: `MM/DD/YYYY HH:MM:SS`. UTC Time |
+| `data.trip_start_date` | String (Date) | The start date of the trip. Format: `MM/DD/YYYY.` |
+| `data.trip_end_date` | String (Date) | The end date of the trip. Format: `MM/DD/YYYY.` |
 | `data.pickup_country` | String | Country of pickup. Example: `United States`. |
 | `data.pickup_state` | String | State of pickup. Example: `New York`. |
 | `data.residence_country` | String | The residence country of the user. Example: `United States`. |
