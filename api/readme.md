@@ -3,6 +3,7 @@
 |1|[auth](./01%20Auth.md)| Authentication request & response|
 |2|[master](./02%20Masters.md)| Master request & response|
 |2.1|[Premium Calculation](./02.1%20Premium%20Calculation.md)|Premium Calculation request & response|
+|2.2|[Check CD Balance](./02.2%20Check%20CD%20Balance.md)|Check CD Balance request & response|
 |3|[Quote Save & Finalize](./03%20Quote%20Save_Finalize.md)| Quote Save request & response|
 |4|[Payment](./04%20Payment.md)| Cash Payment request & response|
 |5|[Policy](./05%20View%20Policy.md)| View Policy response|
