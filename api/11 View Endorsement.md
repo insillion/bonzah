@@ -39,8 +39,8 @@ The response will be a JSON object containing the details of the Bonzah endorsem
 | `data.epayment_id` | String | Unique identifier for the endorsement payment. Example: `PY000000001058`. |
 | `data.nstp_id` | String | Unique identifier for the non-standard transaction proposal (NSTP). Example: `N000000000043`. |
 | `data.endorsement_remarks` | String | Remarks associated with the endorsement. Empty if not provided. |
-| `data.policy_start_date` | String (Date) | Start date and time of the policy. Format: MM/DD/YYYY HH:MM:SS. UTC Time Example: 09/24/2024 13:00:00. |
-| `data.policy_end_date` | String (Date) | End date and time of the policy. Format: MM/DD/YYYY HH:MM:SS. UTC Time Example: 09/26/2024 15:00:00. |
+| `data.policy_start_date` | String (Date) | Start date and time of the policy. Format: MM/DD/YYYY HH:MM:SS.  Example: 09/24/2024 13:00:00. |
+| `data.policy_end_date` | String (Date) | End date and time of the policy. Format: MM/DD/YYYY HH:MM:SS.  Example: 09/26/2024 15:00:00. |
 | `data.premium_value` | Float | The new premium value due to the endorsement. Example: `55.64`. |
 | `data.dropoff_option` | String | Option selected for dropping off. Example: `Same`. |
 | `data.address_line_1` | String | First line of the address. Example: `address1`. |
