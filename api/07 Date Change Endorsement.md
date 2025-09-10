@@ -26,9 +26,9 @@ For all scenarios, the customer will receive appropriate communication/confirmat
     
 - `policy_id` (string, Required): The ID of the policy.
     
-- `policy_start_date` (string, Required): The start date of the policy. (MM/DD/YYYY)
+- `policy_start_date` (string, Required): The start date of the policy. (MM/DD/YYYY HH:mm:ss)
     
-- `policy_end_date` (string, Required): The end date of the policy. (MM/DD/YYYY)
+- `policy_end_date` (string, Required): The end date of the policy. (MM/DD/YYYY HH:mm:ss)
     
 - `endorsement_remarks` (string, optional): Any remarks related to the endorsement.
     
@@ -59,8 +59,8 @@ If the date is reduced, an endorsement will be triggered, and the underwriter wi
 | `data.endorsement_name` | String | Name of the endorsement. Example: `Date Change Endorsement`. |
 | `data.epayment_id` | String | Unique identifier for the endorsement payment. Example: `PY000000001058`. |
 | `data.nstp_id` | String | Unique identifier for the non-standard transaction proposal (NSTP). Example: `N000000000043`. |
-| `data.policy_start_date` | String (DateTime) | Start date of the policy. Format: `MM/DD/YYYY`. Example: `09/24/2024`. |
-| `data.policy_end_date` | String (DateTime) | End date of the policy. Format: `MM/DD/YYYY`. Example: `09/26/2024`. |
+| `data.policy_start_date` | String (DateTime) | Start date and time of the policy. Format: `MM/DD/YYYY HH:MM:SS`. Example: `09/24/2024 13:00:00`. |
+| `data.policy_end_date` | String (DateTime) | End date and time of the policy. Format: `MM/DD/YYYY HH:MM:SS`. Example: `09/26/2024 15:00:00`. |
 | `data.computed_premium_value` | Float | The computed total premium value after endorsement. Example: `115.90`. |
 | `data.premium_value` | Float | The new premium value due to the endorsement. Example: `55.64`. |
 | `data.dropoff_option` | String | Drop-off option associated with the policy. Example: `Same`. |
