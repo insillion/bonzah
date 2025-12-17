@@ -28,7 +28,7 @@ The request body should be in JSON format and include the following parameters:
 | --- | --- | --- | --- |
 | quote_id | String | Unique identifier for the quote | Optional |
 | trip_start_date | date | Start date of the trip (MM/DD/YYYY HH:mm:ss) | Required |
-| trip_end_date | date | End date of the trip (MM/DD/YYYY HH:mm:ss)  | Required |
+| trip_end_date | date | End date of the trip (MM/DD/YYYY HH:mm:ss) | Required |
 | pickup_country | String | Country for car pickup. Should be as per master | Required |
 | pickup_state | String | State for car pickup. Should be as per master | Required |
 | drop_off_time | String | Time for car drop-off.  <br>  <br>Same - If the time of vehicle drop-off is the same as the time of vehicle pick-up.  <br>  <br>Later - If the time of vehicle drop-off is later than the time of pickup | Required |
@@ -58,6 +58,8 @@ The request body should be in JSON format and include the following parameters:
 | license_plate | String | The vehicle's license plate number. | Required |
 | state_licensed_in | String | The state where the vehicle is licensed (e.g., CA, NY). | Required |
 | vehicle_class | String | The vechicle's class | Required |
+| ev_classification | String | Electric Vechicle Classification  <br>**Allowed Options are :**  <br>\[  <br>"Yes",  <br>"No",  <br>"Hybrid",  <br>"I don't know"  <br>\] | Optional |
+| rental_use | String | Rental purpose  <br>**Allowed Options are :** \[  <br>"Commute",  <br>"Pleasure/Personal",  <br>"Commercial"  <br>\] | Optional |
 | additional_drivers\[\] | array | An array of objects, where each object represents an additional driver.  <br>\[ first_name, last_name, email, dob and phone_no \] | Optional |
 | first_name | string | The additional driver's first name. | Required |
 | last_name | string | The additional driver's last name. | Required |
@@ -137,3 +139,5 @@ StartFragment
 | `data.additional_drivers[].email` | String | Additional driver's email.  <br>Example: `miket@gmail.com` |
 | `data.additional_drivers[].dob` | String | Additional driver's date of birth`(MM/DD/YYYY).`  <br>Example: `07/29/1990` |
 | `data.additional_drivers[].phone_no` | String | Additional driver's phone number.  <br>Example : `13251233246` |
+| `data.ev_classification` | String | EV Classification  <br>Example : No |
+| `data.rental_use` | String | Purpose of Rental  <br>Example : Pleasure/Personal |
