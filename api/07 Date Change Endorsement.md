@@ -34,6 +34,15 @@ For all scenarios, the customer will receive appropriate communication/confirmat
     
 - `endo_source` (String , Required ) Source of the request (Ex: API)
     
+- `endo_booking_time_zone` (String , Required ) This field is required and should specify the appropriate time zone for the booking. Below are some examples of valid time zones:  
+    `1. America/New_York (Eastern Time)`  
+    `2. America/Chicago (Central Time)`  
+    `3. America/Denver (Mountain Time)`  
+    `4. America/Los_Angeles (Pacific Time)`  
+    `5. America/Anchorage (Alaska Time)`  
+    `6. Pacific/Honolulu (Hawaii Time)`  
+    `7. Asia/Kolkata (India Standard Time)`
+    
 - `finalize` (integer, Required): Indicates whether the endorsement is to be finalized. Once finalized the endorsement can not be modified. Tag value should pass "1". "0" (or any other value) is not an accepted value.
     
 
@@ -59,12 +68,11 @@ If the date is reduced, an endorsement will be triggered, and the underwriter wi
 | `data.endorsement_name` | String | Name of the endorsement. Example: `Date Change Endorsement`. |
 | `data.epayment_id` | String | Unique identifier for the endorsement payment. Example: `PY000000001058`. |
 | `data.nstp_id` | String | Unique identifier for the non-standard transaction proposal (NSTP). Example: `N000000000043`. |
-| `data.policy_start_date` | String (DateTime) | Start date and time of the policy. Format: `MM/DD/YYYY HH:MM:SS`. Example: `09/24/2024 13:00:00`. |
-| `data.policy_end_date` | String (DateTime) | End date and time of the policy. Format: `MM/DD/YYYY HH:MM:SS`. Example: `09/26/2024 15:00:00`. |
+| `data.policy_start_date` | String (Date) | Start date and time of the policy. Format: `MM/DD/YYYY`. |
+| `data.policy_end_date` | String (Date) | End date and time of the policy. Format: `MM/DD/YYYY`. |
 | `data.computed_premium_value` | Float | The computed total premium value after endorsement. Example: `115.90`. |
 | `data.premium_value` | Float | The new premium value due to the endorsement. Example: `55.64`. |
 | `data.dropoff_option` | String | Drop-off option associated with the policy. Example: `Same`. |
 | `data.premium_paid` | Float | The total premium amount paid before the endorsement. Example: `60.26`. |
 | `data.endorsement_remarks` | String | Remarks or notes related to the endorsement. Example: `Endo remarks`. |
 | `data.errors` | Array | If the errors array has values, it means the endorsement contains errors that must be cleared to finalize |
-

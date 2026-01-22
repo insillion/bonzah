@@ -66,6 +66,7 @@ The request body should be in JSON format and include the following parameters:
 | email | string | The additional driver's email address. | Required |
 | dob | string | The additional driver's date of birth. Format: MM/DD/YYYY. | Required |
 | phone_no | string | Must be 11 digits: country code (no +) + mobile number. | Required |
+| policy_booking_time_zone | string | This field is required and should specify the appropriate time zone for the policy booking. Below are some examples of valid time zones:  <br>  <br>`1. America/New_York (Eastern Time)`  <br>`2. America/Chicago (Central Time)`  <br>`3. America/Denver (Mountain Time)`  <br>`4. America/Los_Angeles (Pacific Time)`  <br>`5. America/Anchorage (Alaska Time)`  <br>`6. Pacific/Honolulu (Hawaii Time)`  <br>`7. Asia/Kolkata (India Standard Time)` | Required |
 | finalize | Number | 0 - Draft quote  <br>1 - Finalize quote  <br>Once finalized the quote can not be modified | Required to Finalize and Issue policy |
 
 ### Response

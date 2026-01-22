@@ -38,7 +38,16 @@ The request should include the following parameters in the raw request body:
     
 - `phone_no` (string,Required): The phone number of the policyholder.
     
-- endo_source (String , Required ) Source of the request (Ex: API)
+- `endo_source` (String , Required ) Source of the request (Ex: API)
+    
+- `endo_booking_time_zone` (String , Required ) This field is required and should specify the appropriate time zone for the booking. Below are some examples of valid time zones:  
+    `1. America/New_York (Eastern Time)`  
+    `2. America/Chicago (Central Time)`  
+    `3. America/Denver (Mountain Time)`  
+    `4. America/Los_Angeles (Pacific Time)`  
+    `5. America/Anchorage (Alaska Time)`  
+    `6. Pacific/Honolulu (Hawaii Time)`  
+    `7. Asia/Kolkata (India Standard Time)`
     
 - `finalize` (integer): A flag to indicate whether the endorsement should be finalized (0 for false, 1 for true). Once finalized the endorsement can not be modified
     
