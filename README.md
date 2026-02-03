@@ -58,7 +58,7 @@ Coverage is in Excess of Any Other Primary Coverage
 - SLI must be used in conjunction with RCLI, a "primary insurance". SLI is not "standalone insurance".
 - Secondary insurance for accidents between vehicles.
 - Excess coverage up to $100,000 per person and up to $500,000 in total.
-- Excess Property Damage up to $10,000 beyond any primary coverage.
+- Excess Property Damage up to $10,000 beyond any primary coverage. (Coverage amount varies based on the state.)
 - Does not cover damage to the rental vehicle.
 - SLI is an optional insurance for those who want more extensive coverage.
 - [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.SLI.Only.Brochure.pdf)

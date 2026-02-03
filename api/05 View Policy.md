@@ -18,8 +18,8 @@ The response will include the details of the policy identified by the `policy_id
 | `data.quote_id` | String | Unique identifier for the quote. Example: `Q000000001703`. |
 | `data.quote_no` | String | Quote number. Example: `Q202401000403`. |
 | `data.policy_id` | String | Unique identifier for the policy. Example: `P000000001703`. |
-| `data.trip_start_date` | String (Date) | The start date of the trip. Format: `MM/DD/YYYY HH:MM:SS.` |
-| `data.trip_end_date` | String (Date) | The end date of the trip. Format: `MM/DD/YYYY HH:MM:SS.` |
+| `data.trip_start_date` | String (Date) | The start date of the trip. Format: `MM/DD/YYYY HH:MM:SS` |
+| `data.trip_end_date` | String (Date) | The end date of the trip. Format: `MM/DD/YYYY HH:MM:SS` |
 | `data.pickup_country` | String | Country of pickup. Example: `United States`. |
 | `data.pickup_state` | String | State of pickup. Example: `New York`. |
 | `data.residence_country` | String | The residence country of the user. Example: `United States`. |
@@ -34,9 +34,12 @@ The response will include the details of the policy identified by the `policy_id
 | `data.rcli_rate` | String | Rate for RCLI coverage. Example: `"$14.88 / 24 hours"`. |
 | `data.sli_rate` | String | Rate for SLI coverage. Example: `"$11.90 / 24 hours"`. |
 | `data.pai_rate` | String | Rate for PAI coverage. Example: `"$6.90 / 24 hours"`. |
-| `data.f_cov_lable_prem1` | String | Coverage label premium 1. Example: `"$25,000.00"`. |
-| `data.f_cov_lable_prem2` | String | Coverage label premium 2. Example: `"$50,000.00"`. |
-| `data.f_cov_lable_prem3` | String | Coverage label premium 3. Example: `"$10,000.00"`. |
+| `data.f_cov_lable_prem1` | String | RCLI Coverage label premium 1. Example: `"$25,000.00"`. |
+| `data.f_cov_lable_prem2` | String | RCLI Coverage label premium 2. Example: `"$50,000.00"`. |
+| `data.f_cov_lable_prem3` | String | RCLI Coverage label premium 3. Example: `"$10,000.00"`. |
+| `data.f_sli_bodily_injury_perperson` | String | SLI Coverage limit for  <br>Bodily Injury - Per Person - Up to `Ex:$100,000` per person per accident |
+| `data.f_sli_bodily_injury_aggregate` | String | SLI Coverage limit for  <br>Bodily Injury - Aggregate - Up `Ex:$500,000` to per accident |
+| `data.f_sli_property_damage` | String | SLI Coverage limit for  <br>Property Damage - `Ex:$10,000` |
 | `data.coverage_information` | Array of Objects | List of optional coverages and their details. |
 | `data.coverage_information[].optional_addon_cover_name` | String | Name of the optional addon cover. Example: `Collision Damage Waiver (CDW)`. |
 | `data.coverage_information[].opted` | String | Indicates if the addon cover is opted. Example: `Yes`. |

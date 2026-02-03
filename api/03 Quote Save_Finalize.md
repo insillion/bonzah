@@ -33,11 +33,11 @@ The request body should be in JSON format and include the following parameters:
 | pickup_state | String | State for car pickup. Should be as per master | Required |
 | drop_off_time | String | Time for car drop-off.  <br>  <br>Same - If the time of vehicle drop-off is the same as the time of vehicle pick-up.  <br>  <br>Later - If the time of vehicle drop-off is later than the time of pickup | Required |
 | residence_country | String | Country of residence. Should be as per master | Required |
-| residence_state | String | State of residence. Should be as per master | Optional |
+| residence_state | String | State of residence. Should be as per master | Required |
 | cdw_cover | Boolean | Whether Collision Damage Waiver is included | Required if Opted |
 | rcli_cover | Boolean | Whether Rental Car Liability Insurance is included | Required if Opted |
-| sli_cover | Boolean | Whether Supplemental Liability Insurance is included | Required if Opted |
-| pai_cover | Boolean | Whether Personal Accident Insurance is included | Required if Opted |
+| sli_cover | Boolean | Whether Supplemental Liability Insurance is included | Required if Opted  <br>**Note :**** Not a standalone or primary policy, must be purchased with RCLI. |
+| pai_cover | Boolean | Whether Personal Accident Insurance is included | Required if Opted  <br>**Note : ****This cover not applicable for some states. |
 | first_name | String | First name of the insured person | Required |
 | last_name | String | Last name of the insured person | Required |
 | dob | date | Date of birth of the insured person (MM/DD/YYYY) | Required |
@@ -49,15 +49,12 @@ The request body should be in JSON format and include the following parameters:
 | inspection_done | String | Specifies the receiver of the vehicle Inspection emails. if inspection is to be done by the customer "**Renter"** is to be passed.  <br>  <br>If the vehicle inspections are to be carried out by the Rental Agency pass "**Rental Agency".**  <br>  <br>This is Mandatory if the CDW cover is selected | Required for CDW |
 | source | String | Source of the request (Ex: API) | Required |
 | phone_no | String | Phone number of the insured person (must be 11 digits long, including the country code without the + symbol, followed by the mobile number). | Required |
-| license_no | String | Driver's licence no of the insured person | Required |
-| drivers_license_state | String | State that issued the driver's license of the insured person | Required |
-| age_first_licensed | Integer | Age when the insured person was first licensed to drive | Required |
-| year | Integer | The model year of the vehicle | Required |
-| make | String | The manufacturer of the vehicle (e.g., Toyota, Ford) | Required |
-| model | String | The specific model of the vehicle (e.g., Camry, Mustang) | Required |
-| license_plate | String | The vehicle's license plate number. | Required |
-| state_licensed_in | String | The state where the vehicle is licensed (e.g., CA, NY). | Required |
-| vehicle_class | String | The vechicle's class | Required |
+| license_no | String | Driver's licence no of the insured person | Optional |
+| drivers_license_state | String | State that issued the driver's license of the insured person | Optional |
+| year | Integer | The model year of the vehicle | Optional |
+| make | String | The manufacturer of the vehicle (e.g., Toyota, Ford) | Optional |
+| model | String | The specific model of the vehicle (e.g., Camry, Mustang) | Optional |
+| vehicle_class | String | The vechicle's class | Optional |
 | ev_classification | String | Electric Vechicle Classification  <br>**Allowed Options are :**  <br>\[  <br>"Yes",  <br>"No",  <br>"Hybrid",  <br>"I don't know"  <br>\] | Optional |
 | rental_use | String | Rental purpose  <br>**Allowed Options are :** \[  <br>"Commute",  <br>"Pleasure/Personal",  <br>"Commercial"  <br>\] | Optional |
 | additional_drivers\[\] | array | An array of objects, where each object represents an additional driver.  <br>\[ first_name, last_name, email, dob and phone_no \] | Optional |
@@ -103,6 +100,9 @@ StartFragment
 | `data.f_cov_lable_prem1` | String | RCLI Coverage limit for Bodily Injury - Per Person : Example: `"$25,000.00"`. |
 | `data.f_cov_lable_prem2` | String | RCLI Coverage limit for Bodily Injury - Aggregate : Example: `"$50,000.00"`. |
 | `data.f_cov_lable_prem3` | String | RCLI Coverage limit for Property Damage : Example: `"$10,000.00"`. |
+| `data.f_sli_bodily_injury_perperson` | String | SLI Coverage limit for  <br>Bodily Injury - Per Person - Up to `Ex:$100,000` per person per accident |
+| `data.f_sli_bodily_injury_aggregate` | String | SLI Coverage limit for  <br>Bodily Injury - Aggregate - Up `Ex:$500,000` to per accident |
+| `data.f_sli_property_damage` | String | SLI Coverage limit for  <br>Property Damage - `Ex:$10,000` |
 | `data.coverage_information` | Array of Objects | List of optional coverages and their details. |
 | `data.coverage_information[].optional_addon_cover_name` | String | Name of the optional addon cover. Example: `Collision Damage Waiver (CDW)`. |
 | `data.coverage_information[].opted` | String | Indicates if the addon cover is opted. Example: `Yes`. |
