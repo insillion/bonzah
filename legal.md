@@ -3,7 +3,7 @@
 
 You may embed this as part of your own Terms and Conditions. Locations isn’t as important to Bonzah as including it on the rental car site.
 
-By selecting any of these insurances, the renter agrees to these [Terms and Conditions](https://bonzah.com/company/terms), [Privacy](https://bonzah.com/company/privacy), and [Covered Vehicles](https://bonzah.com/restricted-vehicle-types). Insurance is only for drivers 21 years and older with a valid driver's license. Unlicensed drivers are not entitled to coverage under any circumstances. The renter will be responsible for any unlisted additional drivers. Insurance may not apply if the renter or additional driver violates the rental agreement or violates traffic regulations. 
+By selecting any of these insurances, the renter agrees to these [Terms and Conditions](https://bonzah.com/company/terms), [Privacy](https://bonzah.com/company/privacy), and [Covered Vehicles](https://bonzah.com/included-and-restricted-vehicle-types). Insurance is only for drivers 21 years and older with a valid driver's license. Unlicensed drivers are not entitled to coverage under any circumstances. The renter will be responsible for any unlisted additional drivers. Insurance may not apply if the renter or additional driver violates the rental agreement or violates traffic regulations. 
 
 <br><br>
 
