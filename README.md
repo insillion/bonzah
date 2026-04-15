@@ -34,21 +34,24 @@ Bonzah allows some liberties here, but we think the most important information t
 ## Collision Damage Waiver (CDW) - *Rental Vehicle Protection*
 Covers physical damages to the rental vehicle when there is an accident with another vehicle. 
 - Up to $35,000 Damage
-- $1,000 Deductible
+- Up to $1,000 Deductible
 - Primary Insurance for accidents between vehicles
 - Does not cover non-rental vehicle damage​
-- Excludes medical and comprehensive coverage, such as mechanical issues caused by misuse, theft, vandalism, single car accidents.
-- Not for commercial use. Not compatible with cars for hire and delivery services such as Uber Lyft, DoorDash.
+- Excludes medical, PIM, UIM, UM, and comprehensive coverage, such as mechanical issues caused by misuse, theft, vandalism, single car accident.
+- Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash.
+
 - [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.Collision-Damage-Warranty.Brochure.pdf)
 <br>
 
 ## Renter's Contingent Liability Insurance (RCLI) - *Protection for Damages Done to Third Parties*
-Covers 3rd parties' property and injury when renter is at fault; does not cover renter's injuries and rental vehicle.
+Covers damage to 3rd parties' property and injury when renter is at fault in accident. Does not cover rental vehicle damage or occupants (where allowed by law).​​
 - Primary insurance for non-rental car damages when the renter is at fault in an accident.
 - Covers the legal state minimum liability requirements. Coverage amount varies based on the state.
 - Bodily Injury Claims - Up to the legal state minimum requirements per person and total.
 - Property Damage - Up to the legal state minimum requirements.
 - Does not cover damage to the rental vehicle.
+- Excludes medical, PIM, UIM, and UM where allowed by law
+- Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash
 - [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.RCLI.Brochure.pdf)
 
 <br>
@@ -59,7 +62,9 @@ Coverage is in Excess of Any Other Primary Coverage
 - Secondary insurance for accidents between vehicles.
 - Excess coverage up to $100,000 per person and up to $500,000 in total.
 - Excess Property Damage up to $10,000 beyond any primary coverage. (Coverage amount varies based on the state.)
-- Does not cover damage to the rental vehicle.
+- Does not cover rental vehicle damage.
+- Excludes medical, PIM, UIM, and UM where allowed by law
+- Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash.
 - SLI is an optional insurance for those who want more extensive coverage.
 - [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.SLI.Only.Brochure.pdf)
 <br>
