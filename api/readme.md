@@ -328,11 +328,24 @@ Covers life, medical expenses, and lost or damaged items. Personal Accident Insu
 
 <br>
 
-## Complete Auto Guard for Renters and Additional Drivers Listed on the Rental Contract
-Recommended for International Drivers and Domestic Drivers who do not own a vehicle.
-Combines Primary Rental Vehicle Coverage (CDW) + 3rd Party Liability Coverage (RCLI) 
+## Insurance Disclosure
+By purchasing coverage through this site, you acknowledge that Pablow Inc. dba Bonzah.com ("Bonzah") is the licensed broker of record and offers insurance coverage through various insurance carriers. The specific carrier issuing your policy will be identified at the time of purchase and in your policy documents.
+
+Coverage may include Collision Damage Waiver (CDW/LDW), Rental Car Liability Insurance (RCLI), and Supplemental Liability Insurance (SLI) as offered. Coverage excludes medical payments, Personal InjuryProtection (PIP), Underinsured Motorist (UIM), and Uninsured Motorist (UM) coverage where permitted by law. Full terms, conditions, limits, and exclusions are set forth in the policy documents provided at the time of purchase.
+
+By proceeding with your purchase, you agree to Bonzah.com's Terms of 
+Service and Privacy Policy.
+https://bonzah.com/terms
+https://bonzah.com/privacy
 
 <br>
 
-## Complete Liability Guard for Renters and Additional Drivers Listed on the Rental Contract
-Combines RCLI + SLI for complete  3rd Party Liability Coverage
+## Add a link to Excluded Vehicles
+Must be clearly displayed prior to purchase.
+https://bonzah.com/included-and-restricted-vehicle-types
+
+<br>
+
+## Add a link to flyers for all policies
+Links must be provided to flyers for all policies offered.
+
