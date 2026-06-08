@@ -37,7 +37,7 @@ Covers physical damages to the rental vehicle when there is an accident with ano
 - Up to $1,000 Deductible
 - Primary Insurance for accidents between vehicles
 - Does not cover non-rental vehicle damage​
-- Excludes medical, PIM, UIM, UM, and comprehensive coverage, such as mechanical issues caused by misuse, theft, vandalism, single car accident.
+- Excludes medical, PIP, UIM, UM, and comprehensive coverage, such as mechanical issues caused by misuse, theft, vandalism, single car accident.
 - Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash.
 
 - [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.Collision-Damage-Warranty.Brochure.pdf)
@@ -50,7 +50,7 @@ Covers damage to 3rd parties' property and injury when renter is at fault in acc
 - Bodily Injury Claims - Up to the legal state minimum requirements per person and total.
 - Property Damage - Up to the legal state minimum requirements.
 - Does not cover damage to the rental vehicle.
-- Excludes medical, PIM, UIM, and UM where allowed by law
+- Excludes medical, PIP, UIM, and UM where allowed by law
 - Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash
 - [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.RCLI.Brochure.pdf)
 
@@ -63,7 +63,7 @@ Coverage is in Excess of Any Other Primary Coverage
 - Excess coverage up to $100,000 per person and up to $500,000 in total.
 - Excess Property Damage up to $10,000 beyond any primary coverage. (Coverage amount varies based on the state.)
 - Does not cover rental vehicle damage.
-- Excludes medical, PIM, UIM, and UM where allowed by law
+- Excludes medical, PIP, UIM, and UM where allowed by law
 - Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash.
 - SLI is an optional insurance for those who want more extensive coverage.
 - [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.SLI.Only.Brochure.pdf)
