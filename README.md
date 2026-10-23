@@ -24,59 +24,87 @@ Please see our presentation for more information: [Bonzah Insurance Basics](http
 ## Insurance Descriptions
 
 Bonzah allows some liberties here, but we think the most important information to convery to rental customers is:
-- Name of the policy and its acronym : E.g., "Collision Damage Waiver (CDW)"
+- Name of the policy and its acronym : E.g., "Collision Damage Warranty (CDW)"
 - The italicized description.  E.g., "Covers damages to the rental vehicle when there is an accident with another vehicle."
 - Values. E.g., "$35,000 in rental car coverage" or "Up to state minimum requirements for liability coverage."
 - What is not covered. E.g., "Renter may still be liable for any damage done to third parties" or "Does not cover damage to the rental vehicle"
 
 <br>
 
-## Collision Damage Waiver (CDW) - *Rental Vehicle Protection*
-Covers physical damages to the rental vehicle when there is an accident with another vehicle. 
+## Collision Damage Warranty (CDW) - *Rental Vehicle Protection*
+*Covers physical damages to the rental vehicle when there is an accident with another vehicle.*
+Affordable Rental Vehicle Damage Insurance
 - Up to $35,000 Damage
-- Up to $1,000 Deductible
+- $1,000 Deductible
 - Primary Insurance for accidents between vehicles
-- Does not cover non-rental vehicle damage​
-- Excludes medical, PIP, UIM, UM, and comprehensive coverage, such as mechanical issues caused by misuse, theft, vandalism, single car accident.
+- Does not cover non-rental vehicle damage
+- Excludes medical, PIP, UIM, UM and comprehensive coverage, such as mechanical issues caused by misuse, theft, vandalism, single car accident
 - Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash.
+- [Description of Coverage (flyer)](https://business.bonzah.com/flyers/bonzah-cdw-flyer.pdf)
 
-- [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.Collision-Damage-Warranty.Brochure.pdf)
 <br>
 
 ## Renter's Contingent Liability Insurance (RCLI) - *Protection for Damages Done to Third Parties*
-Covers damage to 3rd parties' property and injury when renter is at fault in accident. Does not cover rental vehicle damage or occupants (where allowed by law).​​
-- Primary insurance for non-rental car damages when the renter is at fault in an accident.
-- Covers the legal state minimum liability requirements. Coverage amount varies based on the state.
-- Bodily Injury Claims - Up to the legal state minimum requirements per person and total.
-- Property Damage - Up to the legal state minimum requirements.
-- Does not cover damage to the rental vehicle.
+*Covers damage to 3rd parties' property and injury when renter is at fault in accident. Does not cover rental vehicle damage or occupants (where allowed by law).*
+Primary State Minimum Liability Insurance
+- Bodily Injury - Per Person - $25,000.00 (specific to your state)
+- Bodily Injury - Aggregate - $50,000.00 (specific to your state)
+- Property Damage - $25,000.00 (specific to your state)
+- Does not cover rental vehicle damage
 - Excludes medical, PIP, UIM, and UM where allowed by law
-- Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash
-- [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.RCLI.Brochure.pdf)
+- Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash.
+- [Description of Coverage (flyer)](https://business.bonzah.com/flyers/bonzah-rcli-flyer.pdf)
 
 <br>
 
 ## Supplemental Liability Insurance (SLI)
-Coverage is in Excess of Any Other Primary Coverage
-- SLI must be used in conjunction with RCLI, a "primary insurance". SLI is not "standalone insurance".
-- Secondary insurance for accidents between vehicles.
-- Excess coverage up to $100,000 per person and up to $500,000 in total.
-- Excess Property Damage up to $10,000 beyond any primary coverage. (Coverage amount varies based on the state.)
-- Does not cover rental vehicle damage.
+*Supplements RCLI coverage to enhanced levels of coverage. Not a standalone or primary policy, must be purchased with RCLI.*
+Coverage is in Excess of Any Primary Liability Coverage
+- Bodily Injury - Per Person - Up to $100,000 in total
+- Bodily Injury - Aggregate - Up to $500,000 in total
+- Property Damage - $10,000 additional coverage
+- Does not cover rental vehicle damage
 - Excludes medical, PIP, UIM, and UM where allowed by law
 - Not for commercial use. Not compatible with cars for hire and delivery services such as Uber, Lyft, DoorDash.
-- SLI is an optional insurance for those who want more extensive coverage.
-- [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/ARIG.SLI.Only.Brochure.pdf)
+- [Description of Coverage (flyer)](https://business.bonzah.com/flyers/bonzah-sli-flyer.pdf)
+
 <br>
 
-## Personal Accident Insurance (PAI)
-Covers life, medical expenses, and lost or damaged items. Personal Accident Insurance is not auto rental insurance. 
+## Personal Accident / Personal Effects Insurance (PAI/PEI)
+*Covers life, medical expenses, and lost or damaged items. Not rental vehicle coverage.*
+Accident, Medical & Personal Effects Insurance
 - Renter Loss of Life - $50,000
 - Passenger Loss of Life - $5,000
 - Accidental Medical Expense - $1,000
-- Personal Effects Coverage - $500
-- Does not cover damages to the rental vehicle.
-- [Description of Coverage](https://pablowstorageaccount.blob.core.windows.net/prod/assets/PAI.PEI.Brochure-v2.pdf)
+- Personal Effects Coverage - $500, subject to a $25 deductible
+- [Description of Coverage (flyer)](https://business.bonzah.com/flyers/bonzah-pai-pei-flyer.pdf)
+
+<br>
+
+## Insurance Disclosure
+By purchasing coverage through this site, you acknowledge that Pablow Inc. dba Bonzah.com ("Bonzah") is the licensed broker of record and offers insurance coverage through various insurance carriers. The specific carrier issuing your policy will be identified at the time of purchase and in your policy documents.
+
+Coverage may include Collision Damage Warranty (CDW/LDW), Rental Car Liability Insurance (RCLI), and Supplemental Liability Insurance (SLI) as offered. Coverage excludes medical payments (MedPay), Personal Injury Protection (PIP), Underinsured Motorist (UIM), and Uninsured Motorist (UM) coverage where permitted by law. Full terms, conditions, limits, and exclusions are set forth in the policy documents provided at the time of purchase.
+
+Insurance is only for drivers 21 years and older with a valid driver's license and must be listed as an additional driver on the rental agreement. Unlicensed drivers are not entitled to coverage under any circumstance.
+
+The renter is responsible for any unlisted drivers. Insurance may not apply if the renter or additional driver violates the rental agreement, insurance agreement, or violates traffic regulations.
+
+By proceeding with your purchase, you agree to Bonzah.com's [Terms of Service](https://www.bonzah.com/terms) and [Privacy Policy](https://www.bonzah.com/privacy).
+
+<br>
+
+## Required Links
+Must be clearly displayed prior to purchase.
+- Excluded Vehicles: https://bonzah.com/included-and-restricted-vehicle-types
+- Bonzah FAQs: https://bonzah.com/faq
+- Flyers (Description of Coverage) for every policy offered, listed below.
+- CDW flyer: https://business.bonzah.com/flyers/bonzah-cdw-flyer.pdf
+- RCLI flyer: https://business.bonzah.com/flyers/bonzah-rcli-flyer.pdf
+- SLI flyer: https://business.bonzah.com/flyers/bonzah-sli-flyer.pdf
+- PAI/PEI flyer: https://business.bonzah.com/flyers/bonzah-pai-pei-flyer.pdf
+- Rental Agreement Addendum
+
 <br>
 
 ## Complete Auto Guard for Renters and Additional Drivers Listed on the Rental Contract
@@ -87,4 +115,3 @@ Combines Primary Rental Vehicle Coverage (CDW) + 3rd Party Liability Coverage (R
 
 ## Complete Liability Guard for Renters and Additional Drivers Listed on the Rental Contract
 Combines RCLI + SLI for complete  3rd Party Liability Coverage
-
